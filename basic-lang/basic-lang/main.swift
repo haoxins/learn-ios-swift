@@ -1,6 +1,7 @@
+
 import Foundation
 
-println("Hello, World!")
+print("Hello, World!")
 
 let i1 = 123 // const
 var i2 = 123
@@ -14,12 +15,12 @@ var s2 = s1 + String(i2)
 var s3 = "haoxin says \(s1)"
 
 var a1 = ["a", "b", "c"]
-println(a1[1])
+print(a1[1])
 
 var a2 = [
     "name": "haoxin"
 ]
-println(a2["name"])
+print(a2["name"])
 
 var emptyArray = [String]()
 var emptyDict = [String: Float]()
@@ -27,9 +28,9 @@ var emptyDict = [String: Float]()
 // loop
 for i in [1, 2, 3] {
     if i > 2 {
-        println("> 2")
+        print("> 2")
     } else {
-        println("<= 2")
+        print("<= 2")
     }
 }
 
@@ -38,50 +39,50 @@ for (k, v) in [
     "b": ["b1", "b2"],
     ] {
         for s in v {
-            println(s)
+            print(s)
         }
 }
 
 for var i = 0; i < 4; i++ {
-    println(i)
+    print(i)
 }
 
 for i in 0..<4 {
-    println(i)
+    print(i)
 }
 
 for i in 0...4 {
-    println(i)
+    print(i)
 }
 
 var x = 2
 while x < 100 {
     x = x * 2
 }
-println(x)
+print(x)
 
 var y = 2
-do {
+repeat {
     y = y * 2
 } while y < 100
-println(y)
+print(y)
 
 // switch
 let type = "a"
 switch type {
 case "a":
-    println("-> a")
+    print("-> a")
 case "b, c":
-    println("-> b, c")
+    print("-> b, c")
 default:
-    println("-> default")
+    print("-> default")
 }
 
 // func
 func add(a: Int32, b: Int32) -> Int32 {
     return a + b
 }
-println(add(123, 456))
+print(add(123, b: 456))
 
 func out() -> (start: String, end: String) {
     return ("a", "z")
@@ -97,13 +98,13 @@ out()
 
 class User {
     var name: String
-    
+
     init(name: String) {
         self.name = name
     }
-    
+
     func show() {
-        println("my name is \(name)")
+        print("my name is \(name)")
     }
 }
 
@@ -113,16 +114,16 @@ u1.show()
 class Member: User {
     var point: Int
     var _money: Int = 0
-    
+
     init(name: String, point: Int) {
         self.point = point
         super.init(name: name)
     }
-    
+
     func addPoint(num: Int) {
         point += num
     }
-    
+
     var money: Double {
         set {
             _money = Int(money * 100)
@@ -131,9 +132,9 @@ class Member: User {
             return Double(_money) / 100
         }
     }
-    
+
     override func show() {
-        println("my name is \(name)" + ", point is " + String(point))
+        print("my name is \(name)" + ", point is " + String(point))
     }
 }
 
@@ -144,9 +145,9 @@ m1.show()
 // struct
 struct Person {
     var name: String
-    
+
     func show() {
-        println(name)
+        print(name)
     }
 }
 
@@ -162,7 +163,7 @@ protocol ExamplePro {
 class ExampleClass: ExamplePro {
     var desc: String = "xxoo"
     func show() {
-        println(desc)
+        print(desc)
     }
 }
 
@@ -173,7 +174,7 @@ struct ExampleStruct: ExamplePro {
     var desc: String = "ooxx"
     mutating func show() {
         // note: mutating marks a method modifies the structure (no need here)
-        println(desc)
+        print(desc)
     }
 }
 
@@ -185,17 +186,25 @@ extension Int: ExamplePro {
     var desc: String {
         return "number is \(self)"
     }
-    
+
     mutating func show() {
         self += 9
     }
 }
 
-println(9.desc)
+print(9.desc)
 
+extension String {
+    var kiku : String {
+        let shortName = String(characters.dropFirst(1))
+        return "\(self) K\(shortName) kiku O\(shortName)"
+	}
+}
+
+print("Hello".kiku)
 // generic
 
-func repeat<Item>(item: Item, times: Int) -> [Item] {
+func `repeat`<Item>(item: Item, times: Int) -> [Item] {
     var result = [Item]()
     for i in 0..<times {
         result.append(item)
@@ -203,11 +212,11 @@ func repeat<Item>(item: Item, times: Int) -> [Item] {
     return result
 }
 
-var g1 = repeat("xxx", 4)
-println(g1)
+var g1 = `repeat`("xxx", times: 4)
+print(g1)
 
-var g2 = repeat(123, 4)
-println(g2)
+var g2 = `repeat`(123, times: 4)
+print(g2)
 
 // callback
 
@@ -217,14 +226,14 @@ func dosome(a: Int, b: Int, added: (result: Int) -> Void) {
 
 // 1
 
-dosome(123, 456, {
+dosome(123, b: 456, added: {
     (result: Int) in
-        println(result)
+        print(result)
 })
 
 // 2
 
-dosome(123, 456) {
+dosome(123, b: 456) {
     (result: Int) in
-        println(result)
+        print(result)
 }

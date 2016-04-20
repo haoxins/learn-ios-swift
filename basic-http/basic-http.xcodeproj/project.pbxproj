@@ -156,6 +156,8 @@
 		E52700FF1B61E92800EC0BEB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0730;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = hx;
 				TargetAttributes = {
@@ -409,6 +411,7 @@
 				E52701281B61E92900EC0BEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E52701291B61E92900EC0BEB /* Build configuration list for PBXNativeTarget "basic-httpTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +420,7 @@
 				E527012B1B61E92900EC0BEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

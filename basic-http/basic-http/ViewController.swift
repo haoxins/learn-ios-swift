@@ -2,11 +2,11 @@
 import UIKit
 
 func JSONStringify(value: AnyObject, pretty: Bool = false) -> String {
-    var options = pretty ? NSJSONWritingOptions.PrettyPrinted : nil
+    let options = pretty ? NSJSONWritingOptions.PrettyPrinted : NSJSONWritingOptions(rawValue: 0)
 
     if NSJSONSerialization.isValidJSONObject(value) {
-        if let data = NSJSONSerialization
-            .dataWithJSONObject(value, options: options, error: nil) {
+        if let data = try? NSJSONSerialization
+            .dataWithJSONObject(value, options: options) {
             if let str = NSString(data: data, encoding: NSUTF8StringEncoding) {
                 return str as String
             }
@@ -45,9 +45,9 @@ class ViewController: UIViewController {
         httpRequest(req1) {
             (err: String, data: String) -> Void in
             if err != "" {
-                print(err)
+                print(err, terminator: "")
             } else {
-                print(data)
+                print(data, terminator: "")
             }
         }
 
@@ -66,9 +66,9 @@ class ViewController: UIViewController {
         httpRequest(req2) {
             (err: String, data: String) -> Void in
             if err != "" {
-                print(err)
+                print(err, terminator: "")
             } else {
-                print(data)
+                print(data, terminator: "")
             }
         }
     }
