@@ -40,7 +40,7 @@ class ViewController: UIViewController {
         // use NSURLSession
 
         // simple async GET
-        let req1 = NSMutableURLRequest(URL: NSURL(string: "http://httpbin.org/get")!)
+        let req1 = NSMutableURLRequest(URL: NSURL(string: "https://httpbin.org/get")!)
 
         httpRequest(req1) {
             (err: String, data: String) -> Void in
@@ -52,7 +52,7 @@ class ViewController: UIViewController {
         }
 
         // simple async PUT
-        let req2 = NSMutableURLRequest(URL: NSURL(string: "http://httpbin.org/put")!)
+        let req2 = NSMutableURLRequest(URL: NSURL(string: "https://httpbin.org/put")!)
         req2.HTTPMethod = "PUT"
         req2.addValue("application/json", forHTTPHeaderField: "Content-Type")
 
