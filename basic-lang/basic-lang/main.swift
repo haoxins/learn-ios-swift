@@ -43,7 +43,7 @@ for (k, v) in [
         }
 }
 
-for var i = 0; i < 4; i++ {
+for var i in 0.stride(to: 4, by: 1) {
     print(i)
 }
 
@@ -89,7 +89,7 @@ func out() -> (start: String, end: String) {
 }
 out()
 
-[1, 3, 5, 7, 9].map({
+_ = [1, 3, 5, 7, 9].map({
     (n: Int) -> Int in
     return n + 1
 })
@@ -206,7 +206,7 @@ print("Hello".kiku)
 
 func `repeat`<Item>(item: Item, times: Int) -> [Item] {
     var result = [Item]()
-    for i in 0..<times {
+    for _ in 0..<times {
         result.append(item)
     }
     return result
