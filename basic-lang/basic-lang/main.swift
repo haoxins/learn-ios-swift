@@ -25,6 +25,17 @@ print(a2["name"])
 var emptyArray = [String]()
 var emptyDict = [String: Float]()
 
+var optionalHello:String? = "hello"
+var optionalName:String? = "haoxin"
+
+if let name = optionalName {
+    print(name)
+}
+
+if let hello = optionalHello where hello.hasPrefix("hello"), let name = optionalName {
+    print("\(hello), \(name)")
+}
+
 // loop
 for i in [1, 2, 3] {
     if i > 2 {
@@ -43,14 +54,17 @@ for (k, v) in [
         }
 }
 
+print("0, 1, 2, 3")
 for var i in 0.stride(to: 4, by: 1) {
     print(i)
 }
 
+print("0, 1, 2, 3")
 for i in 0..<4 {
     print(i)
 }
 
+print("0, 1, 2, 3, 4")
 for i in 0...4 {
     print(i)
 }
@@ -68,12 +82,14 @@ repeat {
 print(y)
 
 // switch
-let type = "a"
+let type = "a!"
 switch type {
 case "a":
     print("-> a")
-case "b, c":
+case "b", "c":
     print("-> b, c")
+case let x where x.hasSuffix("!"):
+    print("\(x) ends with !")
 default:
     print("-> default")
 }
