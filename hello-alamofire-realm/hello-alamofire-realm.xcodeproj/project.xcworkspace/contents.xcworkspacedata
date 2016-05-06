@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:hello-alamofire-sqlite3.xcodeproj">
+      location = "self:hello-alamofire-realm.xcodeproj">
    </FileRef>
 </Workspace>
