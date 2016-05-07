@@ -12,7 +12,83 @@
 		E514EB261CDB94060085F793 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E514EB241CDB94060085F793 /* Main.storyboard */; };
 		E514EB281CDB94060085F793 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E514EB271CDB94060085F793 /* Assets.xcassets */; };
 		E514EB2B1CDB94060085F793 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E514EB291CDB94060085F793 /* LaunchScreen.storyboard */; };
+		E5E1CE411CDE342700F28CD3 /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E1CE401CDE342700F28CD3 /* config.swift */; };
+		E5E1CE491CDE39FF00F28CD3 /* kit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E1CE481CDE39FF00F28CD3 /* kit.swift */; };
+		E5E70DA11CDDFC7B00D4AFF5 /* SnapKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = E5E70D911CDDF8B200D4AFF5 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E5E70D901CDDF8B200D4AFF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5E70D861CDDF8B200D4AFF5 /* SnapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EEBCC9D819CC627D0083B827;
+			remoteInfo = "SnapKit iOS";
+		};
+		E5E70D921CDDF8B200D4AFF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5E70D861CDDF8B200D4AFF5 /* SnapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 537DCE921C35CC8800B5B899;
+			remoteInfo = "SnapKit tvOS";
+		};
+		E5E70D941CDDF8B200D4AFF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5E70D861CDDF8B200D4AFF5 /* SnapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EECDB37A1AC0C9D4006BBC11;
+			remoteInfo = "SnapKit OSX";
+		};
+		E5E70D961CDDF8B200D4AFF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5E70D861CDDF8B200D4AFF5 /* SnapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EEBCC9E219CC627E0083B827;
+			remoteInfo = "SnapKit iOS Tests";
+		};
+		E5E70D981CDDF8B200D4AFF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5E70D861CDDF8B200D4AFF5 /* SnapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 537DCEAF1C35D90A00B5B899;
+			remoteInfo = "SnapKit tvOS Tests";
+		};
+		E5E70D9A1CDDF8B200D4AFF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5E70D861CDDF8B200D4AFF5 /* SnapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EECDB3841AC0C9D4006BBC11;
+			remoteInfo = "SnapKit OSX Tests";
+		};
+		E5E70D9C1CDDF8B200D4AFF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5E70D861CDDF8B200D4AFF5 /* SnapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 56A0DC091C859E30005973AB;
+			remoteInfo = "Example-iOS";
+		};
+		E5E70D9E1CDDFBEE00D4AFF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5E70D861CDDF8B200D4AFF5 /* SnapKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EEBCC9D719CC627D0083B827;
+			remoteInfo = "SnapKit iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E5E70DA01CDDFC2000D4AFF5 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E5E70DA11CDDFC7B00D4AFF5 /* SnapKit.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E514EB1D1CDB94060085F793 /* hello-snapkit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hello-snapkit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +98,9 @@
 		E514EB271CDB94060085F793 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E514EB2A1CDB94060085F793 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E514EB2C1CDB94060085F793 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5E1CE401CDE342700F28CD3 /* config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
+		E5E1CE481CDE39FF00F28CD3 /* kit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = kit.swift; sourceTree = "<group>"; };
+		E5E70D861CDDF8B200D4AFF5 /* SnapKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SnapKit.xcodeproj; path = SnapKit/SnapKit.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +117,7 @@
 		E514EB141CDB94060085F793 = {
 			isa = PBXGroup;
 			children = (
+				E5E70D861CDDF8B200D4AFF5 /* SnapKit.xcodeproj */,
 				E514EB1F1CDB94060085F793 /* hello-snapkit */,
 				E514EB1E1CDB94060085F793 /* Products */,
 			);
@@ -60,8 +140,24 @@
 				E514EB271CDB94060085F793 /* Assets.xcassets */,
 				E514EB291CDB94060085F793 /* LaunchScreen.storyboard */,
 				E514EB2C1CDB94060085F793 /* Info.plist */,
+				E5E1CE401CDE342700F28CD3 /* config.swift */,
+				E5E1CE481CDE39FF00F28CD3 /* kit.swift */,
 			);
 			path = "hello-snapkit";
+			sourceTree = "<group>";
+		};
+		E5E70D871CDDF8B200D4AFF5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E5E70D911CDDF8B200D4AFF5 /* SnapKit.framework */,
+				E5E70D931CDDF8B200D4AFF5 /* SnapKit.framework */,
+				E5E70D951CDDF8B200D4AFF5 /* SnapKit.framework */,
+				E5E70D971CDDF8B200D4AFF5 /* SnapKit iOS Tests.xctest */,
+				E5E70D991CDDF8B200D4AFF5 /* SnapKit tvOS Tests.xctest */,
+				E5E70D9B1CDDF8B200D4AFF5 /* SnapKit OSX Tests.xctest */,
+				E5E70D9D1CDDF8B200D4AFF5 /* Example-iOS.app */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,10 +170,12 @@
 				E514EB191CDB94060085F793 /* Sources */,
 				E514EB1A1CDB94060085F793 /* Frameworks */,
 				E514EB1B1CDB94060085F793 /* Resources */,
+				E5E70DA01CDDFC2000D4AFF5 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E5E70D9F1CDDFBEE00D4AFF5 /* PBXTargetDependency */,
 			);
 			name = "hello-snapkit";
 			productName = "hello-snapkit";
@@ -110,12 +208,70 @@
 			mainGroup = E514EB141CDB94060085F793;
 			productRefGroup = E514EB1E1CDB94060085F793 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E5E70D871CDDF8B200D4AFF5 /* Products */;
+					ProjectRef = E5E70D861CDDF8B200D4AFF5 /* SnapKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				E514EB1C1CDB94060085F793 /* hello-snapkit */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E5E70D911CDDF8B200D4AFF5 /* SnapKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SnapKit.framework;
+			remoteRef = E5E70D901CDDF8B200D4AFF5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E5E70D931CDDF8B200D4AFF5 /* SnapKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SnapKit.framework;
+			remoteRef = E5E70D921CDDF8B200D4AFF5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E5E70D951CDDF8B200D4AFF5 /* SnapKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SnapKit.framework;
+			remoteRef = E5E70D941CDDF8B200D4AFF5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E5E70D971CDDF8B200D4AFF5 /* SnapKit iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SnapKit iOS Tests.xctest";
+			remoteRef = E5E70D961CDDF8B200D4AFF5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E5E70D991CDDF8B200D4AFF5 /* SnapKit tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SnapKit tvOS Tests.xctest";
+			remoteRef = E5E70D981CDDF8B200D4AFF5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E5E70D9B1CDDF8B200D4AFF5 /* SnapKit OSX Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SnapKit OSX Tests.xctest";
+			remoteRef = E5E70D9A1CDDF8B200D4AFF5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E5E70D9D1CDDF8B200D4AFF5 /* Example-iOS.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Example-iOS.app";
+			remoteRef = E5E70D9C1CDDF8B200D4AFF5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E514EB1B1CDB94060085F793 /* Resources */ = {
@@ -135,12 +291,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5E1CE491CDE39FF00F28CD3 /* kit.swift in Sources */,
+				E5E1CE411CDE342700F28CD3 /* config.swift in Sources */,
 				E514EB231CDB94060085F793 /* ViewController.swift in Sources */,
 				E514EB211CDB94060085F793 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E5E70D9F1CDDFBEE00D4AFF5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SnapKit iOS";
+			targetProxy = E5E70D9E1CDDFBEE00D4AFF5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E514EB241CDB94060085F793 /* Main.storyboard */ = {
@@ -286,6 +452,7 @@
 				E514EB311CDB94060085F793 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
