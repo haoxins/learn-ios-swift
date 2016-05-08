@@ -15,6 +15,7 @@
 		E5E1CE411CDE342700F28CD3 /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E1CE401CDE342700F28CD3 /* config.swift */; };
 		E5E1CE491CDE39FF00F28CD3 /* kit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E1CE481CDE39FF00F28CD3 /* kit.swift */; };
 		E5E70DA11CDDFC7B00D4AFF5 /* SnapKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = E5E70D911CDDF8B200D4AFF5 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E5E86B151CDF2C4B00E3DFA4 /* CallController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E86B141CDF2C4B00E3DFA4 /* CallController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 		E5E1CE401CDE342700F28CD3 /* config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
 		E5E1CE481CDE39FF00F28CD3 /* kit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = kit.swift; sourceTree = "<group>"; };
 		E5E70D861CDDF8B200D4AFF5 /* SnapKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SnapKit.xcodeproj; path = SnapKit/SnapKit.xcodeproj; sourceTree = "<group>"; };
+		E5E86B141CDF2C4B00E3DFA4 /* CallController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 				E514EB2C1CDB94060085F793 /* Info.plist */,
 				E5E1CE401CDE342700F28CD3 /* config.swift */,
 				E5E1CE481CDE39FF00F28CD3 /* kit.swift */,
+				E5E86B141CDF2C4B00E3DFA4 /* CallController.swift */,
 			);
 			path = "hello-snapkit";
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5E1CE491CDE39FF00F28CD3 /* kit.swift in Sources */,
+				E5E86B151CDF2C4B00E3DFA4 /* CallController.swift in Sources */,
 				E5E1CE411CDE342700F28CD3 /* config.swift in Sources */,
 				E514EB231CDB94060085F793 /* ViewController.swift in Sources */,
 				E514EB211CDB94060085F793 /* AppDelegate.swift in Sources */,

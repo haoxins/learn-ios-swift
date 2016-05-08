@@ -63,7 +63,7 @@ class ViewController: UIViewController {
         btn.layer.cornerRadius = 18
         btn.setTitle("√", forState: .Normal)
 
-        btn.addTarget(self, action: Selector("clickSignin"), forControlEvents: .TouchUpInside)
+        btn.addTarget(self, action: "clickSignin:", forControlEvents: .TouchUpInside)
 
         main.addSubview(nameText)
         nameText.snp_makeConstraints { (make) -> Void in
@@ -96,6 +96,11 @@ class ViewController: UIViewController {
 
     // submit
     func clickSignin(sender: UIButton!) {
-        print("OK")
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+
+        let callView: UIViewController = storyboard.instantiateViewControllerWithIdentifier("CallController")
+        self.presentViewController(callView, animated: true) {
+            print("Oh, new view")
+        }
     }
 }
