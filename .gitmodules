@@ -4,3 +4,9 @@
 [submodule "hello-alamofire-realm/Alamofire"]
 	path = hello-alamofire-realm/Alamofire
 	url = https://github.com/Alamofire/Alamofire.git
+[submodule "hello-alamofire-realm/RxSwift"]
+	path = hello-alamofire-realm/RxSwift
+	url = git@github.com:ReactiveX/RxSwift.git
+[submodule "hello-alamofire-realm/realm-cocoa"]
+	path = hello-alamofire-realm/realm-cocoa
+	url = https://github.com/realm/realm-cocoa.git
