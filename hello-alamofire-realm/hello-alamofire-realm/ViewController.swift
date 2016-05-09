@@ -6,8 +6,10 @@
 //  Copyright © 2016 hx. All rights reserved.
 //
 
-import UIKit
 import Alamofire
+import RxSwift
+import Realm
+import UIKit
 
 class ViewController: UIViewController {
 
@@ -43,6 +45,55 @@ class ViewController: UIViewController {
                         }
                 }
             }
+
+        testRealm()
+
+        helloRx()
+    }
+
+    func testRealm() {
+        let dog = Dog()
+        dog.name = "hi"
+        dog.age = 123
+//
+//        let realm = try! Realm
+//
+//        try! realm.write {
+//            realm.add(dog)
+//        }
+    }
+
+    func helloRx() {
+        // https://github.com/ReactiveX/RxSwift/blob/master/Documentation/Examples.md#calculated-variable
+        let a = Variable(1)
+        let b = Variable(2)
+
+        let c = Observable.combineLatest(a.asObservable(), b.asObservable()) { $0 + $1 }
+            .filter { $0 >= 0 }               // if `a + b >= 0` is true, `a + b` is passed to map operator
+            .map { "\($0) is positive" }      // maps `a + b` to "\(a + b) is positive"
+
+        // Since initial values are a = 1, b = 2
+        // 1 + 2 = 3 which is >= 0, `c` is initially equal to "3 is positive"
+
+        // To pull values out of rx variable `c`, subscribe to values from  `c`.
+        // `subscribeNext` means subscribe to next (fresh) values of variable `c`.
+        // That also includes the initial value "3 is positive".
+        c.subscribeNext { print($0) }          // prints: "3 is positive"
+
+        // a = 4 is in RxSwift
+        a.value = 4                                   // prints: 6 is positive
+        // Sum of latest values is now `4 + 2`, `6` is >= 0, map operator
+        // produces "6 is positive" and that result is "assigned" to `c`.
+        // Since the value of `c` changed, `{ print($0) }` will get called,
+        // and "6 is positive" is printed.
+
+        // b = -8 is in RxSwift
+        b.value = -8                                 // doesn't print anything
+        // Sum of latest values is `4 + (-8)`, `-4` is not >= 0, map doesn't
+        // get executed.
+        // That means that `c` still contains "6 is positive" and that's correct.
+        // Since `c` hasn't been updated, that means next value hasn't been produced,
+        // and `{ print($0) }` won't be called.
     }
 
     override func didReceiveMemoryWarning() {
