@@ -6,14 +6,11 @@
 //  Copyright © 2016 hx. All rights reserved.
 //
 
+import RealmSwift
+
 import Foundation
 
-class Dog {
+class Dog: Object {
     dynamic var name = ""
     dynamic var age = 0
 }
-//
-//calss Person: Object {
-//    dynamic var name = ""
-//    dynamic var male = true
-//}

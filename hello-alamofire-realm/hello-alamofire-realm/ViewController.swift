@@ -6,10 +6,11 @@
 //  Copyright © 2016 hx. All rights reserved.
 //
 
+import UIKit
+
+import RealmSwift
 import Alamofire
 import RxSwift
-import Realm
-import UIKit
 
 class ViewController: UIViewController {
 
@@ -55,12 +56,16 @@ class ViewController: UIViewController {
         let dog = Dog()
         dog.name = "hi"
         dog.age = 123
-//
-//        let realm = try! Realm
-//
-//        try! realm.write {
-//            realm.add(dog)
-//        }
+
+        let realm = try! Realm()
+
+        try! realm.write {
+            realm.add(dog)
+        }
+
+        let count = realm.objects(Dog).filter("age == 123").count
+
+        print("dogs: \(count)")
     }
 
     func helloRx() {
