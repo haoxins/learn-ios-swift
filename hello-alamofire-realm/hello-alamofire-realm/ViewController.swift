@@ -17,11 +17,37 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let btn1 = UIButton()
+        btn1.setTitle("hello alamofire", forState: .Normal)
+        btn1.setTitleColor(UIColor.blueColor(), forState: .Normal)
+        btn1.frame = CGRectMake(15, -50, 300, 200)
+        view.addSubview(btn1)
+
+        btn1.addTarget(self, action: "helloAlamofire:", forControlEvents: .TouchUpInside)
+
+        let btn2 = UIButton()
+        btn2.setTitle("hello realm", forState: .Normal)
+        btn2.setTitleColor(UIColor.blueColor(), forState: .Normal)
+        btn2.frame = CGRectMake(15, 50, 300, 200)
+        view.addSubview(btn2)
+
+        btn2.addTarget(self, action: "helloRealm:", forControlEvents: .TouchUpInside)
+
+        let btn3 = UIButton()
+        btn3.setTitle("hello rx", forState: .Normal)
+        btn3.setTitleColor(UIColor.blueColor(), forState: .Normal)
+        btn3.frame = CGRectMake(15, 100, 300, 200)
+        view.addSubview(btn3)
+
+        btn3.addTarget(self, action: "helloRx:", forControlEvents: .TouchUpInside)
+    }
+
+    func helloAlamofire() {
         Alamofire.request(.GET, "https://httpbin.org/get", parameters: ["foo": "bar"])
             .responseJSON { response in
-//                print(response.request)
-//                print(response.response)
-//                print(response.data) // bin
+                // print(response.request)
+                // print(response.response)
+                // print(response.data) // bin
                 print(response.result)
 
                 if let JSON = response.result.value {
@@ -44,15 +70,12 @@ class ViewController: UIViewController {
                         if let JSON = response.result.value {
                             print("JSON: \(JSON)")
                         }
-                }
+                    }
             }
 
-        testRealm()
-
-        helloRx()
     }
 
-    func testRealm() {
+    func helloRealm() {
         let dog = Dog()
         dog.name = "hi"
         dog.age = 123
