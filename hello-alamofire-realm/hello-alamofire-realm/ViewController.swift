@@ -40,9 +40,17 @@ class ViewController: UIViewController {
         view.addSubview(btn3)
 
         btn3.addTarget(self, action: "helloRx:", forControlEvents: .TouchUpInside)
+
+        let btn4 = UIButton()
+        btn4.setTitle("goto rx", forState: .Normal)
+        btn4.setTitleColor(UIColor.blueColor(), forState: .Normal)
+        btn4.frame = CGRectMake(15, 150, 300, 200)
+        view.addSubview(btn4)
+
+        btn4.addTarget(self, action: "gotoRxView:", forControlEvents: .TouchUpInside)
     }
 
-    func helloAlamofire() {
+    func helloAlamofire(sender: UIButton!) {
         Alamofire.request(.GET, "https://httpbin.org/get", parameters: ["foo": "bar"])
             .responseJSON { response in
                 // print(response.request)
@@ -75,7 +83,7 @@ class ViewController: UIViewController {
 
     }
 
-    func helloRealm() {
+    func helloRealm(sender: UIButton!) {
         let dog = Dog()
         dog.name = "hi"
         dog.age = 123
@@ -91,7 +99,7 @@ class ViewController: UIViewController {
         print("dogs: \(count)")
     }
 
-    func helloRx() {
+    func helloRx(sender: UIButton!) {
         // https://github.com/ReactiveX/RxSwift/blob/master/Documentation/Examples.md#calculated-variable
         let a = Variable(1)
         let b = Variable(2)
@@ -122,6 +130,15 @@ class ViewController: UIViewController {
         // That means that `c` still contains "6 is positive" and that's correct.
         // Since `c` hasn't been updated, that means next value hasn't been produced,
         // and `{ print($0) }` won't be called.
+    }
+
+    func gotoRxView(sender: UIButton!) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+
+        let callView: UIViewController = storyboard.instantiateViewControllerWithIdentifier("RxController")
+        self.presentViewController(callView, animated: true) {
+            print("Oh, rx view")
+        }
     }
 
     override func didReceiveMemoryWarning() {

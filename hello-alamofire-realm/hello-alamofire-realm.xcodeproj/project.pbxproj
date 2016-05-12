@@ -20,6 +20,7 @@
 		E59F032A1CDF7BAB004F5540 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E59F03281CDF7BAB004F5540 /* LaunchScreen.storyboard */; };
 		E59F03491CDF811C004F5540 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E59F033C1CDF8050004F5540 /* Alamofire.framework */; };
 		E59F034A1CDF811C004F5540 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E59F033C1CDF8050004F5540 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E5A63D031CE49B5D001ABAB4 /* RxController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A63D021CE49B5D001ABAB4 /* RxController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -315,6 +316,7 @@
 		E59F03291CDF7BAB004F5540 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E59F032B1CDF7BAB004F5540 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E59F03311CDF8050004F5540 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		E5A63D021CE49B5D001ABAB4 /* RxController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -403,6 +405,7 @@
 				E59F03281CDF7BAB004F5540 /* LaunchScreen.storyboard */,
 				E59F032B1CDF7BAB004F5540 /* Info.plist */,
 				E5280FEA1CE0D3DA0064A3AE /* EntityController.swift */,
+				E5A63D021CE49B5D001ABAB4 /* RxController.swift */,
 			);
 			path = "hello-alamofire-realm";
 			sourceTree = "<group>";
@@ -755,6 +758,7 @@
 				E59F03201CDF7BAB004F5540 /* AppDelegate.swift in Sources */,
 				E5280FEB1CE0D3DA0064A3AE /* EntityController.swift in Sources */,
 				E528108D1CE0DF890064A3AE /* RLMSupport.swift in Sources */,
+				E5A63D031CE49B5D001ABAB4 /* RxController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
