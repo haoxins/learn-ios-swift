@@ -25,7 +25,7 @@
         <!--Rx Controller-->
         <scene sceneID="1wp-AO-EdP">
             <objects>
-                <viewController storyboardIdentifier="RxController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Prt-f0-Nqd" customClass="RxController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RxController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Prt-f0-Nqd" customClass="RxController" customModule="hello_alamofire_realm" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WKe-7x-OhI"/>
                         <viewControllerLayoutGuide type="bottom" id="yXc-VD-MUA"/>

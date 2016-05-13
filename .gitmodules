@@ -10,3 +10,9 @@
 [submodule "hello-alamofire-realm/realm-cocoa"]
 	path = hello-alamofire-realm/realm-cocoa
 	url = https://github.com/realm/realm-cocoa.git
+[submodule "hello-alamofire-realm/RxRealm"]
+	path = hello-alamofire-realm/RxRealm
+	url = https://github.com/RxSwiftCommunity/RxRealm.git
+[submodule "hello-alamofire-realm/RxAlamofire"]
+	path = hello-alamofire-realm/RxAlamofire
+	url = https://github.com/RxSwiftCommunity/RxAlamofire.git
