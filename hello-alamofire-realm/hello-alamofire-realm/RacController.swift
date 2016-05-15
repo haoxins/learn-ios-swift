@@ -8,8 +8,7 @@
 
 import UIKit
 
-
-class RaxController: UIViewController {
+class RacController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

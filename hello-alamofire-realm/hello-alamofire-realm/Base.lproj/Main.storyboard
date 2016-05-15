@@ -40,10 +40,10 @@
             </objects>
             <point key="canvasLocation" x="60" y="842"/>
         </scene>
-        <!--Rax Controller-->
+        <!--Rac Controller-->
         <scene sceneID="IDB-zE-UZh">
             <objects>
-                <viewController storyboardIdentifier="RaxController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RsW-25-jHE" customClass="RaxController" customModule="hello_alamofire_realm" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RacController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RsW-25-jHE" customClass="RacController" customModule="hello_alamofire_realm" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PGS-eL-zCA"/>
                         <viewControllerLayoutGuide type="bottom" id="YXW-ff-wFL"/>
@@ -56,7 +56,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gQQ-Ef-aEe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="642" y="1243"/>
+            <point key="canvasLocation" x="702" y="831"/>
         </scene>
     </scenes>
 </document>

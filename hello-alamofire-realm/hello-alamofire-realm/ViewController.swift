@@ -17,45 +17,25 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let btn1 = UIButton()
-        btn1.setTitle("hello alamofire", forState: .Normal)
-        btn1.setTitleColor(UIColor.blueColor(), forState: .Normal)
-        btn1.frame = CGRectMake(15, -50, 300, 200)
-        view.addSubview(btn1)
+        addBtn("hello alamofire", top: 0, action: "helloAlamofire:")
 
-        btn1.addTarget(self, action: "helloAlamofire:", forControlEvents: .TouchUpInside)
+        addBtn("hello realm", top: 100, action: "helloRealm:")
 
-        let btn2 = UIButton()
-        btn2.setTitle("hello realm", forState: .Normal)
-        btn2.setTitleColor(UIColor.blueColor(), forState: .Normal)
-        btn2.frame = CGRectMake(15, 50, 300, 200)
-        view.addSubview(btn2)
+        addBtn("hello rx", top: 200, action: "helloRx:")
 
-        btn2.addTarget(self, action: "helloRealm:", forControlEvents: .TouchUpInside)
+        addBtn("goto rx", top: 300, action: "gotoRxView:")
 
-        let btn3 = UIButton()
-        btn3.setTitle("hello rx", forState: .Normal)
-        btn3.setTitleColor(UIColor.blueColor(), forState: .Normal)
-        btn3.frame = CGRectMake(15, 100, 300, 200)
-        view.addSubview(btn3)
+        addBtn("goto rac", top: 400, action: "gotoRacView:")
+    }
 
-        btn3.addTarget(self, action: "helloRx:", forControlEvents: .TouchUpInside)
+    func addBtn(text: String, top: CGFloat, action: Selector) {
+        let btn = UIButton()
+        btn.setTitle(text, forState: .Normal)
+        btn.setTitleColor(UIColor.blueColor(), forState: .Normal)
+        btn.frame = CGRectMake(15, top, 300, 100)
+        view.addSubview(btn)
 
-        let btn4 = UIButton()
-        btn4.setTitle("goto rx", forState: .Normal)
-        btn4.setTitleColor(UIColor.blueColor(), forState: .Normal)
-        btn4.frame = CGRectMake(15, 150, 300, 200)
-        view.addSubview(btn4)
-
-        btn4.addTarget(self, action: "gotoRxView:", forControlEvents: .TouchUpInside)
-
-        let btn5 = UIButton()
-        btn5.setTitle("goto rac", forState: .Normal)
-        btn5.setTitleColor(UIColor.blueColor(), forState: .Normal)
-        btn5.frame = CGRectMake(15, 200, 300, 200)
-        view.addSubview(btn5)
-
-        btn4.addTarget(self, action: "gotoRacView:", forControlEvents: .TouchUpInside)
+        btn.addTarget(self, action: action, forControlEvents: .TouchUpInside)
     }
 
     func helloAlamofire(sender: UIButton!) {
@@ -154,7 +134,7 @@ class ViewController: UIViewController {
 
         let callView: UIViewController = storyboard.instantiateViewControllerWithIdentifier("RacController")
         self.presentViewController(callView, animated: true) {
-            print("Oh, rax view")
+            print("Oh, rac view")
         }
     }
 
