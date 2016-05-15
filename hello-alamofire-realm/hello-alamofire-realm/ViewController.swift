@@ -48,6 +48,14 @@ class ViewController: UIViewController {
         view.addSubview(btn4)
 
         btn4.addTarget(self, action: "gotoRxView:", forControlEvents: .TouchUpInside)
+
+        let btn5 = UIButton()
+        btn5.setTitle("goto rac", forState: .Normal)
+        btn5.setTitleColor(UIColor.blueColor(), forState: .Normal)
+        btn5.frame = CGRectMake(15, 200, 300, 200)
+        view.addSubview(btn5)
+
+        btn4.addTarget(self, action: "gotoRacView:", forControlEvents: .TouchUpInside)
     }
 
     func helloAlamofire(sender: UIButton!) {
@@ -138,6 +146,15 @@ class ViewController: UIViewController {
         let callView: UIViewController = storyboard.instantiateViewControllerWithIdentifier("RxController")
         self.presentViewController(callView, animated: true) {
             print("Oh, rx view")
+        }
+    }
+
+    func gotoRacView(sender: UIButton!) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+
+        let callView: UIViewController = storyboard.instantiateViewControllerWithIdentifier("RacController")
+        self.presentViewController(callView, animated: true) {
+            print("Oh, rax view")
         }
     }
 

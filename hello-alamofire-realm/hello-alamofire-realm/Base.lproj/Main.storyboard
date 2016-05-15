@@ -40,5 +40,23 @@
             </objects>
             <point key="canvasLocation" x="60" y="842"/>
         </scene>
+        <!--Rax Controller-->
+        <scene sceneID="IDB-zE-UZh">
+            <objects>
+                <viewController storyboardIdentifier="RaxController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RsW-25-jHE" customClass="RaxController" customModule="hello_alamofire_realm" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PGS-eL-zCA"/>
+                        <viewControllerLayoutGuide type="bottom" id="YXW-ff-wFL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Yt6-wA-Wet">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gQQ-Ef-aEe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="642" y="1243"/>
+        </scene>
     </scenes>
 </document>
