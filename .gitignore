@@ -11,6 +11,7 @@ DerivedData
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
+project.xcworkspace
 xcuserdata
 
 ## Other
@@ -24,3 +25,5 @@ xcuserdata
 *.ipa
 
 Carthage/Build
+
+.DS_Store
