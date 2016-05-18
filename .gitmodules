@@ -22,3 +22,15 @@
 [submodule "hello-alamofire-realm/ReactiveCocoa"]
 	path = hello-alamofire-realm/ReactiveCocoa
 	url = https://github.com/ReactiveCocoa/ReactiveCocoa.git
+[submodule "mbox/SnapKit"]
+	path = mbox/SnapKit
+	url = https://github.com/SnapKit/SnapKit.git
+[submodule "mbox/RxSwift"]
+	path = mbox/RxSwift
+	url = git@github.com:ReactiveX/RxSwift.git
+[submodule "mbox/Alamofire"]
+	path = mbox/Alamofire
+	url = https://github.com/Alamofire/Alamofire.git
+[submodule "mbox/RxAlamofire"]
+	path = mbox/RxAlamofire
+	url = https://github.com/RxSwiftCommunity/RxAlamofire.git
