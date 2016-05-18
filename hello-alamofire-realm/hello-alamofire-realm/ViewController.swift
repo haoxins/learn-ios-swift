@@ -24,8 +24,6 @@ class ViewController: UIViewController {
         addBtn("hello rx", top: 200, action: "helloRx:")
 
         addBtn("goto rx", top: 300, action: "gotoRxView:")
-
-        addBtn("goto rac", top: 400, action: "gotoRacView:")
     }
 
     func addBtn(text: String, top: CGFloat, action: Selector) {

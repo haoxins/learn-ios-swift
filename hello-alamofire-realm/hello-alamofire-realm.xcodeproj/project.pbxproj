@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E508C8891CE8E1510082F2F0 /* RacController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E508C8881CE8E1510082F2F0 /* RacController.swift */; };
 		E5280FEB1CE0D3DA0064A3AE /* EntityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5280FEA1CE0D3DA0064A3AE /* EntityController.swift */; };
 		E528106A1CE0DD410064A3AE /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E528104B1CE0DCA10064A3AE /* RxCocoa.framework */; };
 		E528106B1CE0DD410064A3AE /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52810431CE0DCA10064A3AE /* RxSwift.framework */; };
@@ -523,7 +522,6 @@
 /* Begin PBXFileReference section */
 		E508C82F1CE8E0F80082F2F0 /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = SwiftyJSON/SwiftyJSON.xcodeproj; sourceTree = "<group>"; };
 		E508C8701CE8E1100082F2F0 /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveCocoa.xcodeproj; path = ReactiveCocoa/ReactiveCocoa.xcodeproj; sourceTree = "<group>"; };
-		E508C8881CE8E1510082F2F0 /* RacController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RacController.swift; sourceTree = "<group>"; };
 		E5280FEA1CE0D3DA0064A3AE /* EntityController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityController.swift; sourceTree = "<group>"; };
 		E528102B1CE0DCA10064A3AE /* Rx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Rx.xcodeproj; path = RxSwift/Rx.xcodeproj; sourceTree = "<group>"; };
 		E528106C1CE0DD970064A3AE /* Realm.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Realm.xcodeproj; path = "realm-cocoa/Realm.xcodeproj"; sourceTree = "<group>"; };
@@ -690,7 +688,6 @@
 				E59F032B1CDF7BAB004F5540 /* Info.plist */,
 				E5280FEA1CE0D3DA0064A3AE /* EntityController.swift */,
 				E5A63D021CE49B5D001ABAB4 /* RxController.swift */,
-				E508C8881CE8E1510082F2F0 /* RacController.swift */,
 			);
 			path = "hello-alamofire-realm";
 			sourceTree = "<group>";
@@ -1253,7 +1250,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E508C8891CE8E1510082F2F0 /* RacController.swift in Sources */,
 				E59F03221CDF7BAB004F5540 /* ViewController.swift in Sources */,
 				E59F03201CDF7BAB004F5540 /* AppDelegate.swift in Sources */,
 				E5280FEB1CE0D3DA0064A3AE /* EntityController.swift in Sources */,
