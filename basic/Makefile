@@ -1,8 +1,8 @@
 
 run:
-	xcrun swift main.swift
+	swift main.swift
 
 http:
-	xcrun swift http.swift
+	swift http.swift
 
-.PHONY: test http run
+.PHONY: http run
