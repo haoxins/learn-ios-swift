@@ -25,5 +25,6 @@ xcuserdata
 *.ipa
 
 Carthage/Build
+Pods
 
 .DS_Store
