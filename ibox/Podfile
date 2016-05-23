@@ -1,10 +1,15 @@
 # Uncomment this line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '9.0'
 
 target 'ibox' do
   # Comment this line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
   # Pods for ibox
-
+  source 'https://github.com/CocoaPods/Specs.git'
+  pod 'Alamofire', '3.4.0'
+  pod 'RxSwift', '~> 2.5.0'
+  pod 'RxCocoa', '~> 2.5.0'
+  pod 'SnapKit', '~> 0.21.0'
+  pod 'RxAlamofire', '~> 2.4'
 end
