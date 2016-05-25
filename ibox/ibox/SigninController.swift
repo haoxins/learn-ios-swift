@@ -1,14 +1,7 @@
-//
-//  ViewController.swift
-//  ibox
-//
-//  Created by hx on 5/19/16.
-//  Copyright © 2016 hx. All rights reserved.
-//
 
 import UIKit
 
-class ViewController: UIViewController {
+class SigninController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
