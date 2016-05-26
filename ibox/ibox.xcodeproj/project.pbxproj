@@ -13,6 +13,7 @@
 		E52420111CEDCB7800E9174D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E52420101CEDCB7800E9174D /* Assets.xcassets */; };
 		E52420141CEDCB7800E9174D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E52420121CEDCB7800E9174D /* LaunchScreen.storyboard */; };
 		E56F0F701CF5A0D200788015 /* SigninController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56F0F6F1CF5A0D200788015 /* SigninController.swift */; };
+		E5C8DCE91CF7475200E0B567 /* uiutil.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C8DCE81CF7475200E0B567 /* uiutil.swift */; };
 		E5D96D821CF5F1AE00415A15 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D96D811CF5F1AE00415A15 /* extension.swift */; };
 		E5D96D841CF5F20A00415A15 /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D96D831CF5F20A00415A15 /* config.swift */; };
 		E5D96D861CF5F44E00415A15 /* asset in Resources */ = {isa = PBXBuildFile; fileRef = E5D96D851CF5F44E00415A15 /* asset */; };
@@ -29,6 +30,7 @@
 		E52420131CEDCB7800E9174D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E52420151CEDCB7800E9174D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E56F0F6F1CF5A0D200788015 /* SigninController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigninController.swift; sourceTree = "<group>"; };
+		E5C8DCE81CF7475200E0B567 /* uiutil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = uiutil.swift; sourceTree = "<group>"; };
 		E5D96D811CF5F1AE00415A15 /* extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
 		E5D96D831CF5F20A00415A15 /* config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
 		E5D96D851CF5F44E00415A15 /* asset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = asset; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 		E52420081CEDCB7800E9174D /* ibox */ = {
 			isa = PBXGroup;
 			children = (
+				E5C8DCE81CF7475200E0B567 /* uiutil.swift */,
 				E5D96D851CF5F44E00415A15 /* asset */,
 				E56F0F6F1CF5A0D200788015 /* SigninController.swift */,
 				E52420091CEDCB7800E9174D /* AppDelegate.swift */,
@@ -220,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5C8DCE91CF7475200E0B567 /* uiutil.swift in Sources */,
 				E5D96D821CF5F1AE00415A15 /* extension.swift in Sources */,
 				E5D96D841CF5F20A00415A15 /* config.swift in Sources */,
 				E524200A1CEDCB7800E9174D /* AppDelegate.swift in Sources */,

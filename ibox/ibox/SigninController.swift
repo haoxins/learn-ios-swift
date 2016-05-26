@@ -10,62 +10,97 @@ class SigninController: UIViewController {
         let bgImgView = UIImageView(image: UIImage(named: signinBgImg))
 
         view.addSubview(bgImgView)
+        view.sendSubviewToBack(bgImgView)
         bgImgView.snp_makeConstraints { (make) -> Void in
             make.edges.equalTo(view).inset(UIEdgeInsetsMake(0, 0, 0, 0))
         }
+
         // title
         let title = UILabel()
         title.text = "米奇公园"
         title.textColor = UIColor.whiteColor()
         title.font = UIFont.systemFontOfSize(30)
 
-        bgImgView.addSubview(title)
+        view.addSubview(title)
         title.snp_makeConstraints { (make) -> Void in
-            make.centerX.equalTo(bgImgView)
+            make.centerX.equalTo(view)
             make.top.equalTo(95)
             make.height.equalTo(30)
         }
 
-        // name
+        // name label
         let name = UILabel()
         name.text = "用户名"
         name.textColor = UIColor.whiteColor()
         name.font = UIFont.systemFontOfSize(17)
 
-        bgImgView.addSubview(name)
+        view.addSubview(name)
         name.snp_makeConstraints { (make) -> Void in
             make.left.equalTo(42)
             make.top.equalTo(210)
         }
-
+        // name input
         let nameInput = UITextField()
         nameInput.placeholder = "请输入用户名"
+        nameInput.font = UIFont.systemFontOfSize(19)
+        nameInput.textColor = UIColor.whiteColor()
+        nameInput.autocorrectionType = UITextAutocorrectionType.No
+        nameInput.autocapitalizationType = UITextAutocapitalizationType.None
 
-        bgImgView.addSubview(nameInput)
+        view.addSubview(nameInput)
         nameInput.snp_makeConstraints { (make) -> Void in
-            make.left.right.equalTo(42)
+            make.left.equalTo(42)
+            make.right.equalTo(-42)
             make.top.equalTo(236)
         }
 
-        // pass
+        // name border
+        let nameBorder = UIView()
+        nameBorder.backgroundColor = UIColor.whiteColor()
+
+        view.addSubview(nameBorder)
+        nameBorder.snp_makeConstraints { (make) -> Void in
+            make.left.equalTo(42)
+            make.right.equalTo(-42)
+            make.top.equalTo(260)
+            make.height.equalTo(2)
+        }
+
+        // pass label
         let pass = UILabel()
         pass.text = "密码"
         pass.textColor = UIColor.whiteColor()
         pass.font = UIFont.systemFontOfSize(17)
 
-        bgImgView.addSubview(pass)
+        view.addSubview(pass)
         pass.snp_makeConstraints { (make) -> Void in
             make.left.equalTo(42)
             make.top.equalTo(290)
         }
-
+        // pass input
         let passInput = UITextField()
         passInput.placeholder = "请输入密码"
+        passInput.secureTextEntry = true
+        passInput.font = UIFont.systemFontOfSize(19)
+        passInput.textColor = UIColor.whiteColor()
 
-        bgImgView.addSubview(passInput)
+        view.addSubview(passInput)
         passInput.snp_makeConstraints { (make) -> Void in
-            make.left.right.equalTo(42)
+            make.left.equalTo(42)
+            make.right.equalTo(-42)
             make.top.equalTo(316)
+        }
+
+        // pass border
+        let passBorder = UIView()
+        passBorder.backgroundColor = UIColor.whiteColor()
+
+        view.addSubview(passBorder)
+        passBorder.snp_makeConstraints { (make) -> Void in
+            make.left.equalTo(42)
+            make.right.equalTo(-42)
+            make.top.equalTo(340)
+            make.height.equalTo(2)
         }
 
         // submit
@@ -75,10 +110,10 @@ class SigninController: UIViewController {
         submit.layer.borderColor = UIColor.whiteColor().CGColor
         submit.setTitle("登  录", forState: .Normal)
 
-        bgImgView.addSubview(submit)
+        view.addSubview(submit)
         submit.snp_makeConstraints { (make) -> Void in
             make.top.equalTo(412)
-            make.centerX.equalTo(bgImgView)
+            make.centerX.equalTo(view)
             make.width.equalTo(240)
             make.height.equalTo(52)
         }
