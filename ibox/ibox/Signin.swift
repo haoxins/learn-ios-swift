@@ -117,6 +117,14 @@ class SigninController: UIViewController {
             make.width.equalTo(240)
             make.height.equalTo(52)
         }
+
+        submit.addTarget(self, action: "clickSignin:", forControlEvents: .TouchUpInside)
+    }
+
+    // submit
+    func clickSignin(sender: UIButton!) {
+        let mAuthList = MAuthListController()
+        navigationController?.pushViewController(mAuthList, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
