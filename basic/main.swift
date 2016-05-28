@@ -110,6 +110,13 @@ _ = [1, 3, 5, 7, 9].map({
     return n + 1
 })
 
+// also
+
+_ = [1, 3, 5, 7, 9].map {
+    (n: Int) -> Int in
+    return n + 1
+}
+
 // class
 
 class User {
