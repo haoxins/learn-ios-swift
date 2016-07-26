@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  hello-snapkit
-//
-//  Created by hx on 5/5/16.
-//  Copyright © 2016 hx. All rights reserved.
-//
 
 import UIKit
 import SnapKit

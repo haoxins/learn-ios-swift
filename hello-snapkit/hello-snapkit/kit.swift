@@ -1,10 +1,3 @@
-//
-//  kit.swift
-//  hello-snapkit
-//
-//  Created by hx on 5/7/16.
-//  Copyright © 2016 hx. All rights reserved.
-//
 
 import Foundation
 import UIKit
