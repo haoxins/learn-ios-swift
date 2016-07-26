@@ -1,10 +1,3 @@
-//
-//  RxController.swift
-//  hello-alamofire-realm
-//
-//  Created by hx on 5/12/16.
-//  Copyright © 2016 hx. All rights reserved.
-//
 
 import UIKit
 import RxSwift
