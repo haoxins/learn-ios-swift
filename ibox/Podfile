@@ -7,6 +7,6 @@ target 'ibox' do
 
   # Pods for ibox
   source 'https://github.com/CocoaPods/Specs.git'
-  pod 'Alamofire', '3.4.1'
-  pod 'SnapKit', '0.30.0.beta2'
+  pod 'Alamofire', :git => 'https://github.com/Alamofire/Alamofire.git', :branch => 'swift3'
+  pod 'SnapKit', :git => 'https://github.com/SnapKit/SnapKit', :branch => 'feature/0.40.0'
 end
