@@ -10,7 +10,7 @@ class SigninController: UIViewController {
         let bgImgView = UIImageView(image: UIImage(named: signinBgImg))
 
         view.addSubview(bgImgView)
-        view.sendSubviewToBack(bgImgView)
+        view.sendSubview(toBack: bgImgView)
         bgImgView.snp_makeConstraints { (make) -> Void in
             make.edges.equalTo(view).inset(UIEdgeInsetsMake(0, 0, 0, 0))
         }
@@ -18,8 +18,8 @@ class SigninController: UIViewController {
         // title
         let title = UILabel()
         title.text = "米奇公园"
-        title.textColor = UIColor.whiteColor()
-        title.font = UIFont.systemFontOfSize(30)
+        title.textColor = UIColor.white()
+        title.font = UIFont.systemFont(ofSize: 30)
 
         view.addSubview(title)
         title.snp_makeConstraints { (make) -> Void in
@@ -31,8 +31,8 @@ class SigninController: UIViewController {
         // name label
         let name = UILabel()
         name.text = "用户名"
-        name.textColor = UIColor.whiteColor()
-        name.font = UIFont.systemFontOfSize(17)
+        name.textColor = UIColor.white()
+        name.font = UIFont.systemFont(ofSize: 17)
 
         view.addSubview(name)
         name.snp_makeConstraints { (make) -> Void in
@@ -42,10 +42,10 @@ class SigninController: UIViewController {
         // name input
         let nameInput = UITextField()
         nameInput.placeholder = "请输入用户名"
-        nameInput.font = UIFont.systemFontOfSize(19)
-        nameInput.textColor = UIColor.whiteColor()
-        nameInput.autocorrectionType = UITextAutocorrectionType.No
-        nameInput.autocapitalizationType = UITextAutocapitalizationType.None
+        nameInput.font = UIFont.systemFont(ofSize: 19)
+        nameInput.textColor = UIColor.white()
+        nameInput.autocorrectionType = UITextAutocorrectionType.no
+        nameInput.autocapitalizationType = UITextAutocapitalizationType.none
 
         view.addSubview(nameInput)
         nameInput.snp_makeConstraints { (make) -> Void in
@@ -56,7 +56,7 @@ class SigninController: UIViewController {
 
         // name border
         let nameBorder = UIView()
-        nameBorder.backgroundColor = UIColor.whiteColor()
+        nameBorder.backgroundColor = UIColor.white()
 
         view.addSubview(nameBorder)
         nameBorder.snp_makeConstraints { (make) -> Void in
@@ -69,8 +69,8 @@ class SigninController: UIViewController {
         // pass label
         let pass = UILabel()
         pass.text = "密码"
-        pass.textColor = UIColor.whiteColor()
-        pass.font = UIFont.systemFontOfSize(17)
+        pass.textColor = UIColor.white()
+        pass.font = UIFont.systemFont(ofSize: 17)
 
         view.addSubview(pass)
         pass.snp_makeConstraints { (make) -> Void in
@@ -80,9 +80,9 @@ class SigninController: UIViewController {
         // pass input
         let passInput = UITextField()
         passInput.placeholder = "请输入密码"
-        passInput.secureTextEntry = true
-        passInput.font = UIFont.systemFontOfSize(19)
-        passInput.textColor = UIColor.whiteColor()
+        passInput.isSecureTextEntry = true
+        passInput.font = UIFont.systemFont(ofSize: 19)
+        passInput.textColor = UIColor.white()
 
         view.addSubview(passInput)
         passInput.snp_makeConstraints { (make) -> Void in
@@ -93,7 +93,7 @@ class SigninController: UIViewController {
 
         // pass border
         let passBorder = UIView()
-        passBorder.backgroundColor = UIColor.whiteColor()
+        passBorder.backgroundColor = UIColor.white()
 
         view.addSubview(passBorder)
         passBorder.snp_makeConstraints { (make) -> Void in
@@ -107,8 +107,8 @@ class SigninController: UIViewController {
         let submit = UIButton()
         submit.layer.cornerRadius = 26
         submit.layer.borderWidth = 2
-        submit.layer.borderColor = UIColor.whiteColor().CGColor
-        submit.setTitle("登  录", forState: .Normal)
+        submit.layer.borderColor = UIColor.white().cgColor
+        submit.setTitle("登  录", for: UIControlState())
 
         view.addSubview(submit)
         submit.snp_makeConstraints { (make) -> Void in
@@ -118,11 +118,11 @@ class SigninController: UIViewController {
             make.height.equalTo(52)
         }
 
-        submit.addTarget(self, action: "clickSignin:", forControlEvents: .TouchUpInside)
+        submit.addTarget(self, action: #selector(SigninController.clickSignin(_:)), for: .touchUpInside)
     }
 
     // submit
-    func clickSignin(sender: UIButton!) {
+    func clickSignin(_ sender: UIButton!) {
         let mAuthList = MAuthListController()
         navigationController?.pushViewController(mAuthList, animated: true)
     }
