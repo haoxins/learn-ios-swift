@@ -2,12 +2,14 @@
 import Foundation
 
 func JSONStringify(value: AnyObject, pretty: Bool = false) -> String {
-    let options = pretty ? NSJSONWritingOptions.PrettyPrinted : NSJSONWritingOptions(rawValue: 0)
+    let options = pretty ?
+        JSONSerialization.WritingOptions.prettyPrinted :
+        JSONSerialization.WritingOptions(rawValue: 0)
 
-    if NSJSONSerialization.isValidJSONObject(value) {
-        if let data = try? NSJSONSerialization
-            .dataWithJSONObject(value, options: options) {
-            if let str = NSString(data: data, encoding: NSUTF8StringEncoding) {
+    if JSONSerialization.isValidJSONObject(value) {
+        if let data = try? JSONSerialization
+            .data(withJSONObject: value, options: options) {
+            if let str = NSString(data: data, encoding: String.Encoding.utf8.rawValue) {
                 return str as String
             }
         }
@@ -16,29 +18,27 @@ func JSONStringify(value: AnyObject, pretty: Bool = false) -> String {
     return ""
 }
 
-func httpRequest(req: NSMutableURLRequest, cb: (String, String) -> Void) {
-    let session = NSURLSession.sharedSession()
+func httpRequest(req: URLRequest, cb: (String, String) -> Void) {
+    let task = URLSession.shared().dataTask(with: req as URLRequest) {
+        data, response, error in
 
-    let task = session.dataTaskWithRequest(req, completionHandler: {
-            data, response, error in
-
-            if error != nil {
-                cb((error!.localizedDescription) as String, "")
-            } else {
-                cb("", NSString(data: data!, encoding: NSUTF8StringEncoding) as! String)
-            }
-    })
+        if error != nil {
+            cb((error!.localizedDescription) as String, "")
+        } else {
+            cb("", NSString(data: data!, encoding: String.Encoding.utf8) as! String)
+        }
+    }
 
     task.resume()
 }
 
 
-// use NSURLSession
+// use URLRequest
 
 // simple async GET
-let req1 = NSMutableURLRequest(URL: NSURL(string: "https://httpbin.org/get")!)
+let req1 = URLRequest(url: URL(string: "https://httpbin.org/get")!)
 
-httpRequest(req1) {
+httpRequest(req: req1) {
     (err: String, data: String) -> Void in
         if err != "" {
             print(err, terminator: "")
@@ -48,18 +48,18 @@ httpRequest(req1) {
     }
 
 // simple async PUT
-let req2 = NSMutableURLRequest(URL: NSURL(string: "https://httpbin.org/put")!)
-req2.HTTPMethod = "PUT"
+var req2 = URLRequest(url: URL(string: "https://httpbin.org/put")!)
+req2.httpMethod = "PUT"
 req2.addValue("application/json", forHTTPHeaderField: "Content-Type")
 
-let jsonString = JSONStringify([
+let jsonString = JSONStringify(value: [
     "name": "haoxin"
 ])
 
-let data: NSData = jsonString.dataUsingEncoding(NSUTF8StringEncoding)!
-req2.HTTPBody = data
+let data: Data = jsonString.data(using: String.Encoding.utf8)!
+req2.httpBody = data
 
-httpRequest(req2) {
+httpRequest(req: req2) {
     (err: String, data: String) -> Void in
     if err != "" {
         print(err, terminator: "")
