@@ -32,7 +32,7 @@ if let name = optionalName {
     print(name)
 }
 
-if let hello = optionalHello where hello.hasPrefix("hello"), let name = optionalName {
+if let hello = optionalHello, let name = optionalName, hello.hasPrefix("hello") {
     print("\(hello), \(name)")
 }
 
@@ -55,7 +55,7 @@ for (k, v) in [
 }
 
 print("0, 1, 2, 3")
-for var i in 0.stride(to: 4, by: 1) {
+for var i in stride(from: 0, to: 4, by: 1) {
     print(i)
 }
 
@@ -98,12 +98,12 @@ default:
 func add(a: Int32, b: Int32) -> Int32 {
     return a + b
 }
-print(add(123, b: 456))
+print(add(a: 123, b: 456))
 
 func out() -> (start: String, end: String) {
     return ("a", "z")
 }
-out()
+_ = out()
 
 _ = [1, 3, 5, 7, 9].map({
     (n: Int) -> Int in
@@ -162,7 +162,7 @@ class Member: User {
 }
 
 var m1 = Member(name: "haoxin", point: 123)
-m1.addPoint(234)
+m1.addPoint(num: 234)
 m1.show()
 
 // struct
@@ -235,10 +235,10 @@ func `repeat`<Item>(item: Item, times: Int) -> [Item] {
     return result
 }
 
-var g1 = `repeat`("xxx", times: 4)
+var g1 = `repeat`(item: "xxx", times: 4)
 print(g1)
 
-var g2 = `repeat`(123, times: 4)
+var g2 = `repeat`(item: 123, times: 4)
 print(g2)
 
 // callback
@@ -249,14 +249,14 @@ func dosome(a: Int, b: Int, added: (result: Int) -> Void) {
 
 // 1
 
-dosome(123, b: 456, added: {
+dosome(a: 123, b: 456, added: {
     (result: Int) in
         print(result)
 })
 
 // 2
 
-dosome(123, b: 456) {
+dosome(a: 123, b: 456) {
     (result: Int) in
         print(result)
 }
