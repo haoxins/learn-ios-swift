@@ -1,6 +1,8 @@
 
 import Foundation
 
+let u8 = String.Encoding.utf8.rawValue
+
 func JSONStringify(value: AnyObject, pretty: Bool = false) -> String {
     let options = pretty ?
         JSONSerialization.WritingOptions.prettyPrinted :
@@ -9,7 +11,7 @@ func JSONStringify(value: AnyObject, pretty: Bool = false) -> String {
     if JSONSerialization.isValidJSONObject(value) {
         if let data = try? JSONSerialization
             .data(withJSONObject: value, options: options) {
-            if let str = NSString(data: data, encoding: String.Encoding.utf8.rawValue) {
+            if let str = NSString(data: data, encoding: u8) {
                 return str as String
             }
         }
@@ -19,13 +21,13 @@ func JSONStringify(value: AnyObject, pretty: Bool = false) -> String {
 }
 
 func httpRequest(req: URLRequest, cb: (String, String) -> Void) {
-    let task = URLSession.shared().dataTask(with: req as URLRequest) {
+    let task = URLSession.shared.dataTask(with: req as URLRequest) {
         data, response, error in
 
         if error != nil {
             cb((error!.localizedDescription) as String, "")
         } else {
-            cb("", NSString(data: data!, encoding: String.Encoding.utf8) as! String)
+            cb("", NSString(data: data!, encoding: u8) as! String)
         }
     }
 
