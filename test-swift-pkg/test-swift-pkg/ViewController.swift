@@ -13,11 +13,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+
         self.title = "hello swift package"
         view.backgroundColor = UIColor.cyan
-        
-        let btn = newButton(opts: [
+
+        let btn = newButton([
             "title": "hello",
             "radius": 5,
             "font": UIFont.systemFont(ofSize: 22),
@@ -30,17 +30,17 @@ class ViewController: UIViewController {
         
         view.addSubview(btn)
         
-        let btn2 = newButton(opts: [
+        let btn2 = newButton([
             "title": "goto",
             "color": UIColor(rgb: 0x00aeef),
             "frame": CGRect(x: 15, y: 80, width: 40, height: 30)
         ])
-        
+
         btn2.addTarget(self, action: #selector(ViewController.gotoPage), for: .touchUpInside)
-        
+
         view.addSubview(btn2)
-        
-        view.addSubview(newLabel(opts: [
+
+        view.addSubview(newLabel([
             "text": "label~",
             "fitWidth": true,
             "color": UIColor.gray,
@@ -48,10 +48,10 @@ class ViewController: UIViewController {
             "frame": CGRect(x: 15, y: 120, width: 40, height: 30)
         ]))
         
-        view.addSubview(newTextField(opts: [
+        view.addSubview(newTextField([
             "placeholder": "hahaha",
             "bgColor": UIColor.blue,
-            "frame": CGRect(x: 15, y: 160, width: 40, height: 30)
+            "frame": CGRect(x: 15, y: 160, width: 140, height: 30)
         ]))
     }
     
@@ -65,4 +65,3 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 }
-
