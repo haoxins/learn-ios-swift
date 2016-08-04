@@ -2,7 +2,7 @@
 import Foundation
 import UIKit
 
-class TableView: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class TableView: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     let items = ["one", "two", "three", "four", "five"]
     let cellIndetifier = "TextCell"
