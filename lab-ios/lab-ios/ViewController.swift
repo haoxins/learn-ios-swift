@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  lab-ios
-//
-//  Created by hx on 8/4/16.
-//  Copyright © 2016 hx. All rights reserved.
-//
 
 import UIKit
 
@@ -14,6 +7,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = UIColor.cyan
+        //
+        let btn02 = newButton([
+            "title": "table view",
+            "radius": 5,
+            "frame": CGRect(x: 30, y: 60, width: 140, height: 30)
+        ])
+        
+        btn02.addTarget(self, action: #selector(ViewController.gotoTableView), for: .touchUpInside)
+        
+        view.addSubview(btn02)
     }
 
     override func didReceiveMemoryWarning() {
