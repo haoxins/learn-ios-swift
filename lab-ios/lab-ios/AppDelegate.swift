@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  lab-ios
-//
-//  Created by hx on 8/4/16.
-//  Copyright © 2016 hx. All rights reserved.
-//
 
 import UIKit
 
