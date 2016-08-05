@@ -48,6 +48,11 @@ class TableView: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return cell
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        table.deselectRow(at: indexPath, animated: true)
+        print("select: \(indexPath.row), text: \(items[indexPath.row])")
+    }
+
     func gotoMain() {
         let mainView = ViewController()
         navigationController?.pushViewController(mainView, animated: true)

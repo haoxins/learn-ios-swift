@@ -14,7 +14,8 @@ class CollCellView: UICollectionViewCell {
         imageView = UIImageView(
             frame: CGRect(
                 x: 0, y: 0,
-                width: w / 3 - 10.0, height: w / 3 - 10.0
+                width: w / 3 - 10.0,
+                height: w / 3 - 10.0
             )
         )
         
@@ -44,16 +45,27 @@ class CollectionView: UIViewController, UICollectionViewDelegate, UICollectionVi
         super.viewDidLoad()
 
         view.backgroundColor = UIColor.gray
-        
+
         let collView = self.initCollView()
         
         view.addSubview(collView)
+        
+        // back btn
+        let backBtn = newButton([
+            "title": "back",
+            "radius": 5,
+            "frame": CGRect(x: 10, y: 0, width: 40, height: 30)
+        ])
+
+        backBtn.addTarget(self, action: #selector(TableView.gotoMain), for: .touchUpInside)
+
+        collView.addSubview(backBtn)
     }
     
     func initLayout() -> UICollectionViewLayout {
         let layout = UICollectionViewFlowLayout()
         
-        layout.sectionInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        layout.sectionInset = UIEdgeInsets(top: 40, left: 5, bottom: 5, right: 5)
         layout.minimumLineSpacing = 5
         
         layout.itemSize = CGSize(
@@ -114,5 +126,10 @@ class CollectionView: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("section \(indexPath.row)")
+    }
+
+    func gotoMain() {
+        let mainView = ViewController()
+        navigationController?.pushViewController(mainView, animated: true)
     }
 }
