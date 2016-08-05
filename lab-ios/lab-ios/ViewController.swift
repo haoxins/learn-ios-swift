@@ -27,6 +27,18 @@ class ViewController: UIViewController {
         btn02.addTarget(self, action: #selector(ViewController.gotoTableView), for: .touchUpInside)
         
         view.addSubview(btn02)
+        //
+        let btn03 = newButton([
+            "title": "web view",
+            "radius": 5,
+            "frame": CGRect(x: 30, y: 100, width: 140, height: 30)
+        ])
+
+        btn03.addTarget(self, action: #selector(ViewController.gotoWebView), for: .touchUpInside)
+        
+        view.addSubview(btn03)
+    }
+
     func gotoCollView() {
         let collView = CollectionView()
         navigationController?.pushViewController(collView, animated: true)
@@ -37,6 +49,9 @@ class ViewController: UIViewController {
         navigationController?.pushViewController(tableView, animated: true)
     }
 
+    func gotoWebView() {
+        let webView = WebView()
+        navigationController?.pushViewController(webView, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
