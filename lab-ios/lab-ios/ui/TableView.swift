@@ -55,6 +55,7 @@ class TableView: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     func gotoMain() {
         let mainView = ViewController()
+        mainView.backFrom = "table"
         navigationController?.pushViewController(mainView, animated: true)
     }
     

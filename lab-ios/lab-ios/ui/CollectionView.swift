@@ -130,6 +130,7 @@ class CollectionView: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     func gotoMain() {
         let mainView = ViewController()
+        mainView.backFrom = "collection view"
         navigationController?.pushViewController(mainView, animated: true)
     }
 }

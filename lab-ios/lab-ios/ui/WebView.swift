@@ -39,6 +39,7 @@ class WebView: UIViewController {
 
     func gotoMain() {
         let mainView = ViewController()
+        mainView.backFrom = "web view"
         navigationController?.pushViewController(mainView, animated: true)
     }
     

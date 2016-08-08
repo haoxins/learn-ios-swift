@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C50B978C85BE800C9534DE57 /* Pods_lab_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFAC3475BD5CC6C2DBDE9AEB /* Pods_lab_ios.framework */; };
+		E562CD491D5865C10012ABD8 /* BaiduMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E562CD481D5865C10012ABD8 /* BaiduMapView.swift */; };
 		E57AF3551D52E151000B7DA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57AF3541D52E151000B7DA6 /* AppDelegate.swift */; };
 		E57AF3571D52E151000B7DA6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57AF3561D52E151000B7DA6 /* ViewController.swift */; };
 		E57AF35C1D52E151000B7DA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E57AF35B1D52E151000B7DA6 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		2B7D24A6C41B6D78019259C4 /* Pods-lab-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lab-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-lab-ios/Pods-lab-ios.release.xcconfig"; sourceTree = "<group>"; };
 		608F1E788258334DD6B972BB /* Pods-lab-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lab-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-lab-ios/Pods-lab-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		E562CD481D5865C10012ABD8 /* BaiduMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaiduMapView.swift; path = ui/BaiduMapView.swift; sourceTree = "<group>"; };
 		E57AF3511D52E151000B7DA6 /* lab-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "lab-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E57AF3541D52E151000B7DA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E57AF3561D52E151000B7DA6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				E5D580311D539978007B4128 /* CollectionView.swift */,
 				E5D580321D539978007B4128 /* TableView.swift */,
 				E5D580331D539978007B4128 /* WebView.swift */,
+				E562CD481D5865C10012ABD8 /* BaiduMapView.swift */,
 			);
 			name = ui;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				E57AF3571D52E151000B7DA6 /* ViewController.swift in Sources */,
 				E5D580351D539978007B4128 /* TableView.swift in Sources */,
 				E5D580361D539978007B4128 /* WebView.swift in Sources */,
+				E562CD491D5865C10012ABD8 /* BaiduMapView.swift in Sources */,
 				E57AF3551D52E151000B7DA6 /* AppDelegate.swift in Sources */,
 				E5D5803A1D53999D007B4128 /* UIHelper.swift in Sources */,
 			);
