@@ -30,7 +30,7 @@ class WebView: UIViewController {
         
         webView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
         
-        let req = URLRequest(url: URL(string: "http://baixing.com")!)
+        let req = URLRequest(url: URL(string: "http://localhost:3000")!)
         print("goto page")
         webView.loadRequest(req)
         
