@@ -18,6 +18,7 @@
 		E5D580361D539978007B4128 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D580331D539978007B4128 /* WebView.swift */; };
 		E5D580381D539992007B4128 /* avatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E5D580371D539992007B4128 /* avatar.jpg */; };
 		E5D5803A1D53999D007B4128 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D580391D53999D007B4128 /* UIHelper.swift */; };
+		E5F154481D59C4D600F7FE12 /* WKWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F154471D59C4D600F7FE12 /* WKWebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		E5D580331D539978007B4128 /* WebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebView.swift; path = ui/WebView.swift; sourceTree = "<group>"; };
 		E5D580371D539992007B4128 /* avatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = avatar.jpg; path = asset/avatar.jpg; sourceTree = "<group>"; };
 		E5D580391D53999D007B4128 /* UIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIHelper.swift; path = base/UIHelper.swift; sourceTree = "<group>"; };
+		E5F154471D59C4D600F7FE12 /* WKWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WKWebView.swift; path = ui/WKWebView.swift; sourceTree = "<group>"; };
 		EFAC3475BD5CC6C2DBDE9AEB /* Pods_lab_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lab_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -107,6 +109,7 @@
 				E5D580321D539978007B4128 /* TableView.swift */,
 				E5D580331D539978007B4128 /* WebView.swift */,
 				E562CD481D5865C10012ABD8 /* BaiduMapView.swift */,
+				E5F154471D59C4D600F7FE12 /* WKWebView.swift */,
 			);
 			name = ui;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				E5D580351D539978007B4128 /* TableView.swift in Sources */,
 				E5D580361D539978007B4128 /* WebView.swift in Sources */,
 				E562CD491D5865C10012ABD8 /* BaiduMapView.swift in Sources */,
+				E5F154481D59C4D600F7FE12 /* WKWebView.swift in Sources */,
 				E57AF3551D52E151000B7DA6 /* AppDelegate.swift in Sources */,
 				E5D5803A1D53999D007B4128 /* UIHelper.swift in Sources */,
 			);

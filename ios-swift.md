@@ -1,4 +1,12 @@
 
+```
+Xcode > Preferences > Text Editing >
+
+Line numbers
+
+Including whitespace-only lines
+```
+
 ```xml
 <key>NSAppTransportSecurity</key>
 <dict>

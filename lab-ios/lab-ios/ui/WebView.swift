@@ -2,11 +2,15 @@
 import Foundation
 import UIKit
 
+//
+// WebView: call native, create special network request (oh, god)
+//
+
 class WebView: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         view.backgroundColor = UIColor.gray
 
         let webView = self.initWebView()
@@ -21,10 +25,10 @@ class WebView: UIViewController {
         ])
         
         backBtn.addTarget(self, action: #selector(WebView.gotoMain), for: .touchUpInside)
-        
+
         webView.addSubview(backBtn)
     }
-    
+
     func initWebView() -> UIWebView {
         let webView = UIWebView()
         

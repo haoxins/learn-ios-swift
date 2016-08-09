@@ -48,14 +48,24 @@ class ViewController: UIViewController {
         view.addSubview(btn03)
         // 4
         let btn04 = newButton([
-            "title": "baidu map",
+            "title": "wx web view",
             "radius": 5,
             "frame": CGRect(x: 30, y: 180, width: 140, height: 30)
-        ])
-
-        btn04.addTarget(self, action: #selector(ViewController.gotoBaiduMap), for: .touchUpInside)
+            ])
+        
+        btn04.addTarget(self, action: #selector(ViewController.gotoWXWebView), for: .touchUpInside)
 
         view.addSubview(btn04)
+        // 5
+        let btn05 = newButton([
+            "title": "baidu map",
+            "radius": 5,
+            "frame": CGRect(x: 30, y: 220, width: 140, height: 30)
+        ])
+
+        btn05.addTarget(self, action: #selector(ViewController.gotoBaiduMap), for: .touchUpInside)
+
+        view.addSubview(btn05)
     }
 
     func gotoCollView() {
@@ -73,6 +83,11 @@ class ViewController: UIViewController {
         navigationController?.pushViewController(webView, animated: true)
     }
     
+    func gotoWXWebView() {
+        let wxWebView = MyWKWebView()
+        navigationController?.pushViewController(wxWebView, animated: true)
+    }
+
     func gotoBaiduMap() {
         let baiduMap = BaiduMapView()
         navigationController?.pushViewController(baiduMap, animated: true)
