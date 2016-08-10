@@ -13,10 +13,6 @@
     }
   </style>
   <script>
-    if (window.isInWKWebView) {
-      document.querySelector('body > strong').innerHTML = 'this is in wk web view'
-    }
-
     function webviewCall(action, payload) {
       try {
         // wk web view
@@ -57,6 +53,11 @@
   <p></p>
   <strong></strong>
   <script>
+    if (window.isInWKWebView) {
+      document.querySelector('body > strong')
+        .innerHTML = 'this is in wk web view'
+    }
+
     var count = 0
     function add() {
       count++
