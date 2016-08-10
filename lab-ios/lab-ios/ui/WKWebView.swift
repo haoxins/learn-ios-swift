@@ -25,6 +25,10 @@ class MyWKWebView: UIViewController, WKNavigationDelegate, WKScriptMessageHandle
         let contentController = WKUserContentController()
         // execute
         contentController.addUserScript(WKUserScript(
+            forMainFrameOnly: true
+        ))
+
+        contentController.addUserScript(WKUserScript(
             source: "add()",
             injectionTime: WKUserScriptInjectionTime.atDocumentEnd,
             forMainFrameOnly: true
