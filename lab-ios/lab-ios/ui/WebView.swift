@@ -17,16 +17,8 @@ class WebView: UIViewController {
         
         view.addSubview(webView)
 
-        // back btn
-        let backBtn = newButton([
-            "title": "back",
-            "radius": 5,
-            "frame": CGRect(x: 10, y: 10, width: 40, height: 30)
-        ])
-        
-        backBtn.addTarget(self, action: #selector(WebView.gotoMain), for: .touchUpInside)
+        webView.addSubview(self.getBackBtn())
 
-        webView.addSubview(backBtn)
     }
 
     func initWebView() -> UIWebView {
@@ -39,6 +31,18 @@ class WebView: UIViewController {
         webView.loadRequest(req)
         
         return webView
+    }
+
+    func getBackBtn() -> UIButton {
+        let backBtn = newButton([
+            "title": "back",
+            "radius": 5,
+            "frame": CGRect(x: 10, y: 10, width: 40, height: 30)
+        ])
+
+        backBtn.addTarget(self, action: #selector(WebView.gotoMain), for: .touchUpInside)
+
+        return backBtn
     }
 
     func gotoMain() {

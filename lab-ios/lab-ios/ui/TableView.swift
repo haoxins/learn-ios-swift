@@ -13,16 +13,7 @@ class TableView: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         view.backgroundColor = UIColor.gray
 
-        // back btn
-        let backBtn = newButton([
-            "title": "back",
-            "radius": 5,
-            "frame": CGRect(x: 10, y: 10, width: 40, height: 30)
-        ])
-
-        backBtn.addTarget(self, action: #selector(TableView.gotoMain), for: .touchUpInside)
-        
-        view.addSubview(backBtn)
+        view.addSubview(self.getBackBtn())
         
         self.initTableView()
     }
@@ -51,6 +42,18 @@ class TableView: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         table.deselectRow(at: indexPath, animated: true)
         print("select: \(indexPath.row), text: \(items[indexPath.row])")
+    }
+
+    func getBackBtn() -> UIButton {
+        let backBtn = newButton([
+            "title": "back",
+            "radius": 5,
+            "frame": CGRect(x: 10, y: 10, width: 40, height: 30)
+        ])
+
+        backBtn.addTarget(self, action: #selector(TableView.gotoMain), for: .touchUpInside)
+
+        return backBtn
     }
 
     func gotoMain() {

@@ -49,17 +49,8 @@ class CollectionView: UIViewController, UICollectionViewDelegate, UICollectionVi
         let collView = self.initCollView()
         
         view.addSubview(collView)
-        
-        // back btn
-        let backBtn = newButton([
-            "title": "back",
-            "radius": 5,
-            "frame": CGRect(x: 10, y: 0, width: 40, height: 30)
-        ])
 
-        backBtn.addTarget(self, action: #selector(TableView.gotoMain), for: .touchUpInside)
-
-        collView.addSubview(backBtn)
+        collView.addSubview(self.getBackBtn())
     }
     
     func initLayout() -> UICollectionViewLayout {
@@ -126,6 +117,18 @@ class CollectionView: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("section \(indexPath.row)")
+    }
+
+    func getBackBtn() -> UIButton {
+        let backBtn = newButton([
+            "title": "back",
+            "radius": 5,
+            "frame": CGRect(x: 10, y: 0, width: 40, height: 30)
+        ])
+
+        backBtn.addTarget(self, action: #selector(CollectionView.gotoMain), for: .touchUpInside)
+
+        return backBtn
     }
 
     func gotoMain() {

@@ -9,16 +9,19 @@ class BaiduMapView: UIViewController {
 
         view.backgroundColor = UIColor.gray
 
-        // back btn
+        view.addSubview(self.getBackBtn())
+    }
+
+    func getBackBtn() -> UIButton {
         let backBtn = newButton([
             "title": "back",
             "radius": 5,
             "frame": CGRect(x: 10, y: 10, width: 40, height: 30)
         ])
 
-        backBtn.addTarget(self, action: #selector(WebView.gotoMain), for: .touchUpInside)
-
-        view.addSubview(backBtn)
+        backBtn.addTarget(self, action: #selector(BaiduMapView.gotoMain), for: .touchUpInside)
+        
+        return backBtn
     }
 
     func gotoMain() {

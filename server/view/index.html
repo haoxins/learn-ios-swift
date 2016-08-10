@@ -8,20 +8,55 @@
     html, body {
       height: 100%;
       width: 100%;
+      padding: 10px;
       background: gray;
     }
   </style>
   <script>
+    function webviewCall(action, payload) {
+      try {
+        // wk web view
+        window.webkit.messageHandlers
+          .webviewCall
+          .postMessage(JSON.stringify({
+            payload: payload,
+            action: action
+          }))
+      } catch (e) {
+        console.error(e)
+      }
+    }
+
+    function onNativeMessage(message) {
+      document.querySelector('body > p').innerHTML = message
+    }
+
+    setTimeout(function() {
+      webviewCall('say hello', {
+        message: 'hello'
+      })
+    }, 3000)
+
+    function gotoMap() {
+      webviewCall('goto map')
+    }
+
+    function callOut() {
+      webviewCall('call me')
+    }
   </script>
 </head>
 <body>
-  world
+  <button onclick="gotoMap()">goto map</button>
+  <button onclick="callOut()">call out</button>
   <i></i>
+  <p></p>
   <script>
     var count = 0
     function add() {
       count++
-      document.querySelector('i').innerHTML = count
+      document.querySelector('body > i').innerHTML = count
+      return count
     }
   </script>
 </body>

@@ -48,7 +48,7 @@ class ViewController: UIViewController {
         view.addSubview(btn03)
         // 4
         let btn04 = newButton([
-            "title": "wx web view",
+            "title": "wk web view",
             "radius": 5,
             "frame": CGRect(x: 30, y: 180, width: 140, height: 30)
             ])
