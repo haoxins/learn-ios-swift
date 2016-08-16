@@ -15,6 +15,10 @@ router.get('/', function *(next) {
   yield this.render('index')
 })
 
+router.get('/map', function *(next) {
+  yield this.render('map')
+})
+
 app.use(router.routes())
 app.use(router.allowedMethods())
 
