@@ -7,6 +7,7 @@ import android.support.design.widget.Snackbar
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v7.widget.Toolbar
+import com.haoxin.hx.kotlinforandroid.news.NewsFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,12 +17,16 @@ class MainActivity : AppCompatActivity() {
         val toolbar = findViewById(R.id.toolbar) as Toolbar
         setSupportActionBar(toolbar)
 
-        val fab = findViewById(R.id.fab) as FloatingActionButton
-        fab.setOnClickListener {
-            view -> Snackbar
-                .make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+        if (savedInstanceState == null) {
+            changeFragment(NewsFragment())
         }
+
+//        val fab = findViewById(R.id.fab) as FloatingActionButton
+//        fab.setOnClickListener {
+//            view -> Snackbar
+//                .make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                .setAction("Action", null).show()
+//        }
     }
 
     fun changeFragment(f: Fragment, cleanStack: Boolean = false) {
