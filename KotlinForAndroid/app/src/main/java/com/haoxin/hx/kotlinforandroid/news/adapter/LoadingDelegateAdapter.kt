@@ -4,7 +4,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.ViewGroup
 import com.haoxin.hx.kotlinforandroid.R
 import com.haoxin.hx.kotlinforandroid.commons.adapter.ViewType
-import com.haoxin.hx.kotlinforandroid.commons.inflate
+import com.haoxin.hx.kotlinforandroid.commons.extensions.inflate
 import com.haoxin.hx.kotlinforandroid.commons.adapter.ViewTypeDelegateAdapter
 import kotlinx.android.synthetic.main.news_fragment.*
 
