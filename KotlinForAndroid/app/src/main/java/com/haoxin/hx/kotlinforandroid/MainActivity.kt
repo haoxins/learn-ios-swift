@@ -21,12 +21,12 @@ class MainActivity : AppCompatActivity() {
             changeFragment(NewsFragment())
         }
 
-//        val fab = findViewById(R.id.fab) as FloatingActionButton
-//        fab.setOnClickListener {
-//            view -> Snackbar
-//                .make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                .setAction("Action", null).show()
-//        }
+        val fab = findViewById(R.id.fab) as FloatingActionButton
+        fab.setOnClickListener {
+            view -> Snackbar
+                .make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show()
+        }
     }
 
     fun changeFragment(f: Fragment, cleanStack: Boolean = false) {
