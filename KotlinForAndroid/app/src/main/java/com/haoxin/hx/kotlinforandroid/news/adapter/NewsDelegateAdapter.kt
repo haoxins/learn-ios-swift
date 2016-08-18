@@ -1,7 +1,6 @@
 package com.haoxin.hx.kotlinforandroid.news.adapter
 
 import android.support.v7.widget.RecyclerView
-import android.view.SurfaceHolder
 import android.view.ViewGroup
 import com.haoxin.hx.kotlinforandroid.R
 import com.haoxin.hx.kotlinforandroid.commons.RedditNewsItem
@@ -14,15 +13,15 @@ import kotlinx.android.synthetic.main.news_item.view.*
 
 class NewsDelegateAdapter: ViewTypeDelegateAdapter {
     override fun onCreateViewHolder(parent: ViewGroup): RecyclerView.ViewHolder {
-        return TurnsViewHolder(parent)
+        return LoadingViewHolder(parent)
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, item: ViewType) {
-        holder as TurnsViewHolder
+        holder as LoadingViewHolder
         holder.bind(item as RedditNewsItem)
     }
 
-    class TurnsViewHolder(parent: ViewGroup): RecyclerView.ViewHolder(
+    class LoadingViewHolder(parent: ViewGroup): RecyclerView.ViewHolder(
             parent.inflate(R.layout.news_item)) {
 
         fun bind(item: RedditNewsItem) = with(itemView) {

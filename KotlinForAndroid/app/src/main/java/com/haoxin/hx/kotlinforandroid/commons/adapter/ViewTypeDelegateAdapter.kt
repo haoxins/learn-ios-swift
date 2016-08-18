@@ -1,7 +1,6 @@
 package com.haoxin.hx.kotlinforandroid.commons.adapter
 
 import android.support.v7.widget.RecyclerView
-import android.view.SurfaceHolder
 import android.view.ViewGroup
 
 interface ViewTypeDelegateAdapter {

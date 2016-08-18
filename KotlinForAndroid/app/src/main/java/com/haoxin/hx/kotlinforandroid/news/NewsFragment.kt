@@ -6,7 +6,6 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import java.util.zip.Inflater
 import com.haoxin.hx.kotlinforandroid.R
 import com.haoxin.hx.kotlinforandroid.commons.RedditNewsItem
 import com.haoxin.hx.kotlinforandroid.commons.extensions.inflate
