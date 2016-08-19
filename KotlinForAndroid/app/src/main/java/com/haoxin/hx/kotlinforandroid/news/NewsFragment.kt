@@ -13,6 +13,8 @@ import com.haoxin.hx.kotlinforandroid.news.adapter.NewsAdapter
 import kotlinx.android.synthetic.main.news_fragment.*
 
 class NewsFragment: Fragment() {
+    private val newsManager by lazy { NewsManager() }
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return container?.inflate(R.layout.news_fragment)
     }
@@ -26,20 +28,12 @@ class NewsFragment: Fragment() {
         initAdapter()
 
         if (savedInstanceState == null) {
-            val news = mutableListOf<RedditNewsItem>()
-            for (i in 1..10) {
-                news.add(RedditNewsItem(
-                        "author$i",
-                        "Title $i",
-                        i,
-                        1457207701L - i * 200,
-                        "http://lorempixel.com/200/200/technics/$i",
-                        "url"
-
-                ))
-            }
-            (news_list.adapter as NewsAdapter).addNews(news)
+            requestNews()
         }
+    }
+
+    private fun requestNews() {
+        (news_list.adapter as NewsAdapter).addNews(newsManager.getNews(""))
     }
 
     private fun initAdapter() {
