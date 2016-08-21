@@ -3,9 +3,6 @@ package com.haoxin.hx.criminallntent;
 import java.util.Date;
 import java.util.UUID;
 
-/**
- * Created by hx on 8/6/16.
- */
 public class Crime {
     private UUID mId;
     private String mTitle;

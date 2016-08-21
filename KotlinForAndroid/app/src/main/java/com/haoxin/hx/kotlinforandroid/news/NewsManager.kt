@@ -14,7 +14,6 @@ class NewsManager {
                     1457207701L - i * 200,
                     "http://lorempixel.com/200/200/technics/$i",
                     "url"
-
             ))
         }
 

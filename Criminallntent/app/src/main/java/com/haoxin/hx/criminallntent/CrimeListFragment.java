@@ -8,10 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-
-/**
- * Created by hx on 8/15/16.
- */
 public class CrimeListFragment extends Fragment {
     private RecyclerView mCrimeRecyclerView;
 
