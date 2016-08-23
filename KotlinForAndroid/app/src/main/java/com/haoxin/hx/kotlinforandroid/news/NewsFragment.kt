@@ -7,12 +7,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.haoxin.hx.kotlinforandroid.R
+import com.haoxin.hx.kotlinforandroid.commons.InfiniteScrollListener
+import com.haoxin.hx.kotlinforandroid.commons.RedditNews
 import com.haoxin.hx.kotlinforandroid.commons.RedditNewsItem
 import com.haoxin.hx.kotlinforandroid.commons.extensions.inflate
 import com.haoxin.hx.kotlinforandroid.news.adapter.NewsAdapter
 import kotlinx.android.synthetic.main.news_fragment.*
 
 class NewsFragment: Fragment() {
+    private var redditNews: RedditNews? = null
     private val newsManager by lazy { NewsManager() }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -23,7 +26,10 @@ class NewsFragment: Fragment() {
         super.onActivityCreated(savedInstanceState)
 
         news_list.setHasFixedSize(true)
-        news_list.layoutManager = LinearLayoutManager(context)
+        val linearLayout = LinearLayoutManager(context)
+        news_list.layoutManager = linearLayout
+        news_list.clearOnScrollListeners()
+        news_list.addOnScrollListener(InfiniteScrollListener({ requestNews() }, linearLayout))
 
         initAdapter()
 
@@ -33,6 +39,7 @@ class NewsFragment: Fragment() {
     }
 
     private fun requestNews() {
+        // todo ...
         (news_list.adapter as NewsAdapter).addNews(newsManager.getNews(""))
     }
 
