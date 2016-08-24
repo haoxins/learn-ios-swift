@@ -61,51 +61,11 @@ func newLabel(_ opts: [String: Any]) -> UILabel {
     return label
 }
 
-func newTextField(_ opts: [String: Any]) -> UITextField {
-    let textField = UITextField()
-    
-    if let bgColor = opts["bgColor"] as? UIColor {
-        textField.backgroundColor = bgColor
-    }
-    
-    if let placeholder = opts["placeholder"] as? String {
-        textField.placeholder = placeholder
-    }
-    
-    if let frame = opts["frame"] as? CGRect {
-        textField.frame = frame
-    }
-    
-    if let focus = opts["focus"] as? Bool {
-        if focus {
-            textField.becomeFirstResponder()
+        }
         }
     }
-    
-    if let secure = opts["secure"] as? Bool {
-        if secure {
-            textField.isSecureTextEntry = true
-        }
     }
-    
-    if let keyboard = opts["keyboard"] as? UIKeyboardType {
-        textField.keyboardType = keyboard
     }
-    
-    if let autocorrection = opts["autocorrection"] as? UITextAutocorrectionType {
-        textField.autocorrectionType = autocorrection
-    } else {
-        textField.autocorrectionType = UITextAutocorrectionType.no
-    }
-    
-    if let autocapitalization = opts["autocapitalization"] as? UITextAutocapitalizationType {
-        textField.autocapitalizationType = autocapitalization
-    } else {
-        textField.autocapitalizationType = UITextAutocapitalizationType.none
-    }
-    
-    return textField
-}
 
 extension UIColor {
     convenience init(rgb: Int) {
