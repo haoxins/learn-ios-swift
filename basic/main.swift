@@ -225,21 +225,6 @@ extension String {
 }
 
 print("Hello".kiku)
-// generic
-
-func `repeat`<Item>(item: Item, times: Int) -> [Item] {
-    var result = [Item]()
-    for _ in 0..<times {
-        result.append(item)
-    }
-    return result
-}
-
-var g1 = `repeat`(item: "xxx", times: 4)
-print(g1)
-
-var g2 = `repeat`(item: 123, times: 4)
-print(g2)
 
 // callback
 
