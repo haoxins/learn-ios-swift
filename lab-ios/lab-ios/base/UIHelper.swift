@@ -33,32 +33,7 @@ func newButton(_ opts: [String: Any]) -> UIButton {
     return btn
 }
 
-func newLabel(_ opts: [String: Any]) -> UILabel {
-    let label = UILabel()
-    
-    if let text = opts["text"] as? String {
-        label.text = text
     }
-    
-    if let color = opts["color"] as? UIColor {
-        label.textColor = color
-    }
-    
-    if let bgColor = opts["bgColor"] as? UIColor {
-        label.backgroundColor = bgColor
-    }
-    
-    if let frame = opts["frame"] as? CGRect {
-        label.frame = frame
-    }
-    
-    if let fitWidth = opts["fitWidth"] as? Bool {
-        label.adjustsFontSizeToFitWidth = fitWidth
-    }
-    
-    // label.adjustsFontForContentSizeCategory = true
-    
-    return label
 }
 
         }

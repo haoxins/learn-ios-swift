@@ -8,11 +8,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = UIColor.cyan
-        
-        let label = newLabel([
-            "text": self.backFrom,
-            "frame": CGRect(x: 30, y: 20, width: 140, height: 30)
-        ])
+        let label = UILabel()
+        label.text = self.backFrom
+        label.frame = CGRect(x: 30, y: 20, width: 140, height: 30)
 
         view.addSubview(label)
 
