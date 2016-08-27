@@ -63,9 +63,10 @@ class MyWKWebView: UIViewController, WKNavigationDelegate, WKScriptMessageHandle
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         print("wk: name: \(message.name), body: \(message.body)")
         if message.name == "webviewCall" {
-            if message.body.contains("goto map") {
+            let text = message.body as! String
+            if text.contains("goto map") {
                 self.gotoMap()
-            } else if message.body.contains("call me") {
+            } else if text.contains("call me") {
                 self.sendMessageToWebView("this is ios native")
             }
         }
