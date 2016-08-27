@@ -120,11 +120,10 @@ class CollectionView: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
 
     func getBackBtn() -> UIButton {
-        let backBtn = newButton([
-            "title": "back",
-            "radius": 5,
-            "frame": CGRect(x: 10, y: 0, width: 40, height: 30)
-        ])
+        let backBtn = UIButton()
+        backBtn.title = "back"
+        backBtn.radius = 5
+        backBtn.frame = CGRect(x: 10, y: 0, width: 40, height: 30)
 
         backBtn.addTarget(self, action: #selector(CollectionView.gotoMain), for: .touchUpInside)
 
