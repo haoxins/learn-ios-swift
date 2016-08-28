@@ -1,4 +1,5 @@
 
+import CoreLocation
 import UIKit
 
 class ViewController: UIViewController {
@@ -9,6 +10,10 @@ class ViewController: UIViewController {
 
         view.backgroundColor = UIColor.cyan
 
+        let manager = CLLocationManager()
+        if CLLocationManager.authorizationStatus() == .notDetermined {
+            manager.requestWhenInUseAuthorization()
+        }
 
         let label = UILabel()
         label.text = self.backFrom
