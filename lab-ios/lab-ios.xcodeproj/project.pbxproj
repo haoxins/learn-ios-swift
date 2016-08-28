@@ -140,12 +140,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E57AF3631D52E151000B7DA6 /* Build configuration list for PBXNativeTarget "lab-ios" */;
 			buildPhases = (
-				7CC73A36CB00F0A5C79FD5B6 /* 📦 Check Pods Manifest.lock */,
+				7CC73A36CB00F0A5C79FD5B6 /* [CP] Check Pods Manifest.lock */,
 				E57AF34D1D52E151000B7DA6 /* Sources */,
 				E57AF34E1D52E151000B7DA6 /* Frameworks */,
 				E57AF34F1D52E151000B7DA6 /* Resources */,
-				2C8117B5741149CF05E34B00 /* 📦 Embed Pods Frameworks */,
-				7C31449B7BE263138EBC9B73 /* 📦 Copy Pods Resources */,
+				2C8117B5741149CF05E34B00 /* [CP] Embed Pods Frameworks */,
+				7C31449B7BE263138EBC9B73 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -168,6 +168,7 @@
 				TargetAttributes = {
 					E57AF3501D52E151000B7DA6 = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -204,14 +205,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2C8117B5741149CF05E34B00 /* 📦 Embed Pods Frameworks */ = {
+		2C8117B5741149CF05E34B00 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,14 +220,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-lab-ios/Pods-lab-ios-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7C31449B7BE263138EBC9B73 /* 📦 Copy Pods Resources */ = {
+		7C31449B7BE263138EBC9B73 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,14 +235,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-lab-ios/Pods-lab-ios-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7CC73A36CB00F0A5C79FD5B6 /* 📦 Check Pods Manifest.lock */ = {
+		7CC73A36CB00F0A5C79FD5B6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;

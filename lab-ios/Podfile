@@ -6,5 +6,6 @@ target 'lab-ios' do
   use_frameworks!
 
   # Pods for lab-ios
+  source 'https://github.com/CocoaPods/Specs.git'
 
 end
