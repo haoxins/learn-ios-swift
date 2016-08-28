@@ -21,6 +21,11 @@ extension UIColor {
  */
 extension UIButton {
 
+    convenience init(cb: (_ btn: UIButton) -> Void) {
+        self.init()
+        cb(self)
+    }
+
     var title: String! {
         set (v) {
             self.setTitle(v, for: .normal)

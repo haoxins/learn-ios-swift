@@ -36,12 +36,13 @@ class WebView: UIViewController, UIWebViewDelegate {
     }
 
     func getBackBtn() -> UIButton {
-        let backBtn = UIButton()
-        backBtn.title = "back"
-        backBtn.radius = 5
-        backBtn.frame = CGRect(x: 10, y: 10, width: 40, height: 30)
+        let backBtn = UIButton() { b in
+            b.title = "back"
+            b.radius = 5
+            b.frame = CGRect(x: 10, y: 10, width: 40, height: 30)
 
-        backBtn.addTarget(self, action: #selector(WebView.gotoMain), for: .touchUpInside)
+            b.addTarget(self, action: #selector(WebView.gotoMain), for: .touchUpInside)
+        }
 
         return backBtn
     }
