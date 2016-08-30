@@ -17,6 +17,30 @@ extension UIColor {
 }
 
 /**
+ * UITextField
+ */
+
+extension UITextField {
+
+    convenience init(cb: (_ textField: UITextField) -> Void) {
+        self.init()
+        cb(self)
+    }
+}
+
+/**
+ * UILabel
+ */
+
+extension UILabel {
+
+    convenience init(cb: (_ label: UILabel) -> Void) {
+        self.init()
+        cb(self)
+    }
+}
+
+/**
  * UIButton
  */
 extension UIButton {

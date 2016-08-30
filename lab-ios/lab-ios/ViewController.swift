@@ -71,6 +71,17 @@ class ViewController: UIViewController {
         }
 
         view.addSubview(btn05)
+
+        // just test
+        view.addSubview(UILabel() { l in
+            l.text = "hello"
+            l.frame = CGRect(x: 30, y: 260, width: 140, height: 30)
+        })
+
+        view.addSubview(UITextField() { t in
+            t.placeholder = "hello"
+            t.frame = CGRect(x: 30, y: 300, width: 140, height: 30)
+        })
     }
 
     func gotoCollView() {
