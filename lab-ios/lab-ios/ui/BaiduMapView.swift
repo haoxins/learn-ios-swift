@@ -16,7 +16,7 @@ class BaiduMapView: UIViewController, WKNavigationDelegate, WKScriptMessageHandl
         self.alert("xxoo", message: "ooooooo")
     }
 
-    func initWXCnfig() -> WKWebViewConfiguration {
+    func initWKCnfig() -> WKWebViewConfiguration {
         let contentController = WKUserContentController()
         let config = WKWebViewConfiguration()
         config.userContentController = contentController
@@ -24,10 +24,10 @@ class BaiduMapView: UIViewController, WKNavigationDelegate, WKScriptMessageHandl
         return config
     }
 
-    func initWXWebView() -> WKWebView {
+    func initWKWebView() -> WKWebView {
         let webView = WKWebView(
             frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height),
-            configuration: self.initWXCnfig()
+            configuration: self.initWKCnfig()
         )
 
         webView.navigationDelegate = self
