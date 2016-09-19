@@ -1,5 +1,0 @@
-<resources>
-    <string name="app_name">KotlinAnkoTodo</string>
-    <string name="username_hint">login username</string>
-    <string name="password_hint">login password</string>
-</resources>
