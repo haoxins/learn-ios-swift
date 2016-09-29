@@ -1,6 +1,4 @@
 
-// merchant auth list
-
 import UIKit
 import SnapKit
 
@@ -29,11 +27,6 @@ class MAuthListController: UIViewController {
         list.snp_makeConstraints { (make) -> Void in
             make.top.equalTo(110)
             make.left.right.equalTo(0)
-
         }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
 }

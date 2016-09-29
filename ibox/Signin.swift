@@ -126,8 +126,4 @@ class SigninController: UIViewController {
         let mAuthList = MAuthListController()
         navigationController?.pushViewController(mAuthList, animated: true)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
 }
